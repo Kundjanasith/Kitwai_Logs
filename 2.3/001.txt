@@ -1,0 +1,778 @@
+17/08/29 15:02:10 INFO SparkContext: Running Spark version 2.2.0
+17/08/29 15:02:10 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+17/08/29 15:02:10 INFO SparkContext: Submitted application: W2V
+17/08/29 15:02:10 INFO SecurityManager: Changing view acls to: centos
+17/08/29 15:02:10 INFO SecurityManager: Changing modify acls to: centos
+17/08/29 15:02:10 INFO SecurityManager: Changing view acls groups to: 
+17/08/29 15:02:10 INFO SecurityManager: Changing modify acls groups to: 
+17/08/29 15:02:10 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(centos); groups with view permissions: Set(); users  with modify permissions: Set(centos); groups with modify permissions: Set()
+17/08/29 15:02:11 INFO Utils: Successfully started service 'sparkDriver' on port 43371.
+17/08/29 15:02:11 INFO SparkEnv: Registering MapOutputTracker
+17/08/29 15:02:11 INFO SparkEnv: Registering BlockManagerMaster
+17/08/29 15:02:11 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+17/08/29 15:02:11 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+17/08/29 15:02:11 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-902af535-da01-4cf3-9519-ef8d6b730536
+17/08/29 15:02:11 INFO MemoryStore: MemoryStore started with capacity 366.3 MB
+17/08/29 15:02:11 INFO SparkEnv: Registering OutputCommitCoordinator
+17/08/29 15:02:11 INFO log: Logging initialized @2355ms
+17/08/29 15:02:11 INFO Server: jetty-9.3.z-SNAPSHOT
+17/08/29 15:02:11 INFO Server: Started @2438ms
+17/08/29 15:02:11 INFO AbstractConnector: Started ServerConnector@352c308{HTTP/1.1,[http/1.1]}{0.0.0.0:4040}
+17/08/29 15:02:11 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+17/08/29 15:02:11 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@72efb5c1{/jobs,null,AVAILABLE,@Spark}
+17/08/29 15:02:11 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@2449cff7{/jobs/json,null,AVAILABLE,@Spark}
+17/08/29 15:02:11 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@62da83ed{/jobs/job,null,AVAILABLE,@Spark}
+17/08/29 15:02:11 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@384fc774{/jobs/job/json,null,AVAILABLE,@Spark}
+17/08/29 15:02:11 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@71e9a896{/stages,null,AVAILABLE,@Spark}
+17/08/29 15:02:11 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@408b35bf{/stages/json,null,AVAILABLE,@Spark}
+17/08/29 15:02:11 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@15bcf458{/stages/stage,null,AVAILABLE,@Spark}
+17/08/29 15:02:11 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@726386ed{/stages/stage/json,null,AVAILABLE,@Spark}
+17/08/29 15:02:11 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@14bb2297{/stages/pool,null,AVAILABLE,@Spark}
+17/08/29 15:02:11 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@797501a{/stages/pool/json,null,AVAILABLE,@Spark}
+17/08/29 15:02:11 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@57f791c6{/storage,null,AVAILABLE,@Spark}
+17/08/29 15:02:11 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@6c4f9535{/storage/json,null,AVAILABLE,@Spark}
+17/08/29 15:02:11 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@30c31dd7{/storage/rdd,null,AVAILABLE,@Spark}
+17/08/29 15:02:11 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@596df867{/storage/rdd/json,null,AVAILABLE,@Spark}
+17/08/29 15:02:11 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@241a53ef{/environment,null,AVAILABLE,@Spark}
+17/08/29 15:02:11 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@2db2cd5{/environment/json,null,AVAILABLE,@Spark}
+17/08/29 15:02:11 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@615f972{/executors,null,AVAILABLE,@Spark}
+17/08/29 15:02:11 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@73393584{/executors/json,null,AVAILABLE,@Spark}
+17/08/29 15:02:11 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@1827a871{/executors/threadDump,null,AVAILABLE,@Spark}
+17/08/29 15:02:11 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@7249dadf{/executors/threadDump/json,null,AVAILABLE,@Spark}
+17/08/29 15:02:11 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@66238be2{/static,null,AVAILABLE,@Spark}
+17/08/29 15:02:11 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@5ea502e0{/,null,AVAILABLE,@Spark}
+17/08/29 15:02:11 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@473b3b7a{/api,null,AVAILABLE,@Spark}
+17/08/29 15:02:11 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@133e019b{/jobs/job/kill,null,AVAILABLE,@Spark}
+17/08/29 15:02:11 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@7dac3fd8{/stages/stage/kill,null,AVAILABLE,@Spark}
+17/08/29 15:02:11 INFO SparkUI: Bound SparkUI to 0.0.0.0, and started at http://10.0.0.15:4040
+17/08/29 15:02:11 INFO SparkContext: Added JAR file:/home/centos/kjzth/sparksample/target/scala-2.10/spark-sample_2.10-1.0.jar at spark://10.0.0.15:43371/jars/spark-sample_2.10-1.0.jar with timestamp 1503993731586
+17/08/29 15:02:11 INFO StandaloneAppClient$ClientEndpoint: Connecting to master spark://findfeatures-hra-master-0.novalocal:7077...
+17/08/29 15:02:11 INFO TransportClientFactory: Successfully created connection to findfeatures-hra-master-0.novalocal/10.0.0.15:7077 after 24 ms (0 ms spent in bootstraps)
+17/08/29 15:02:11 INFO StandaloneSchedulerBackend: Connected to Spark cluster with app ID app-20170829150211-0144
+17/08/29 15:02:11 INFO StandaloneAppClient$ClientEndpoint: Executor added: app-20170829150211-0144/0 on worker-20170822112324-10.0.0.10-45253 (10.0.0.10:45253) with 2 cores
+17/08/29 15:02:11 INFO StandaloneSchedulerBackend: Granted executor ID app-20170829150211-0144/0 on hostPort 10.0.0.10:45253 with 2 cores, 2.7 GB RAM
+17/08/29 15:02:11 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 33205.
+17/08/29 15:02:11 INFO NettyBlockTransferService: Server created on 10.0.0.15:33205
+17/08/29 15:02:11 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+17/08/29 15:02:11 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 10.0.0.15, 33205, None)
+17/08/29 15:02:11 INFO BlockManagerMasterEndpoint: Registering block manager 10.0.0.15:33205 with 366.3 MB RAM, BlockManagerId(driver, 10.0.0.15, 33205, None)
+17/08/29 15:02:11 INFO StandaloneAppClient$ClientEndpoint: Executor updated: app-20170829150211-0144/0 is now RUNNING
+17/08/29 15:02:11 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 10.0.0.15, 33205, None)
+17/08/29 15:02:11 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, 10.0.0.15, 33205, None)
+17/08/29 15:02:12 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@5c089b2f{/metrics/json,null,AVAILABLE,@Spark}
+17/08/29 15:02:12 INFO EventLoggingListener: Logging events to hdfs:///tmp/spark-events/app-20170829150211-0144
+17/08/29 15:02:12 INFO StandaloneSchedulerBackend: SchedulerBackend is ready for scheduling beginning after reached minRegisteredResourcesRatio: 0.0
+17/08/29 15:02:13 INFO MemoryStore: Block broadcast_0 stored as values in memory (estimated size 238.5 KB, free 366.1 MB)
+17/08/29 15:02:13 INFO MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 23.2 KB, free 366.0 MB)
+17/08/29 15:02:13 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on 10.0.0.15:33205 (size: 23.2 KB, free: 366.3 MB)
+17/08/29 15:02:13 INFO SparkContext: Created broadcast 0 from textFile at W2V.scala:9
+17/08/29 15:02:13 INFO FileInputFormat: Total input paths to process : 1
+17/08/29 15:02:13 INFO CoarseGrainedSchedulerBackend$DriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (10.0.0.10:52624) with ID 0
+17/08/29 15:02:13 INFO SparkContext: Starting job: collect at Word2Vec.scala:196
+17/08/29 15:02:13 INFO BlockManagerMasterEndpoint: Registering block manager 10.0.0.10:42430 with 1295.4 MB RAM, BlockManagerId(0, 10.0.0.10, 42430, None)
+17/08/29 15:02:13 INFO DAGScheduler: Registering RDD 4 (map at Word2Vec.scala:187)
+17/08/29 15:02:13 INFO DAGScheduler: Got job 0 (collect at Word2Vec.scala:196) with 18 output partitions
+17/08/29 15:02:13 INFO DAGScheduler: Final stage: ResultStage 1 (collect at Word2Vec.scala:196)
+17/08/29 15:02:13 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 0)
+17/08/29 15:02:13 INFO DAGScheduler: Missing parents: List(ShuffleMapStage 0)
+17/08/29 15:02:13 INFO DAGScheduler: Submitting ShuffleMapStage 0 (MapPartitionsRDD[4] at map at Word2Vec.scala:187), which has no missing parents
+17/08/29 15:02:14 INFO MemoryStore: Block broadcast_1 stored as values in memory (estimated size 4.9 KB, free 366.0 MB)
+17/08/29 15:02:14 INFO MemoryStore: Block broadcast_1_piece0 stored as bytes in memory (estimated size 2.8 KB, free 366.0 MB)
+17/08/29 15:02:14 INFO BlockManagerInfo: Added broadcast_1_piece0 in memory on 10.0.0.15:33205 (size: 2.8 KB, free: 366.3 MB)
+17/08/29 15:02:14 INFO SparkContext: Created broadcast 1 from broadcast at DAGScheduler.scala:1006
+17/08/29 15:02:14 INFO DAGScheduler: Submitting 18 missing tasks from ShuffleMapStage 0 (MapPartitionsRDD[4] at map at Word2Vec.scala:187) (first 15 tasks are for partitions Vector(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14))
+17/08/29 15:02:14 INFO TaskSchedulerImpl: Adding task set 0.0 with 18 tasks
+17/08/29 15:02:14 INFO TaskSetManager: Starting task 0.0 in stage 0.0 (TID 0, 10.0.0.10, executor 0, partition 0, ANY, 4877 bytes)
+17/08/29 15:02:14 INFO TaskSetManager: Starting task 1.0 in stage 0.0 (TID 1, 10.0.0.10, executor 0, partition 1, ANY, 4877 bytes)
+17/08/29 15:02:14 INFO BlockManagerInfo: Added broadcast_1_piece0 in memory on 10.0.0.10:42430 (size: 2.8 KB, free: 1295.4 MB)
+17/08/29 15:02:14 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on 10.0.0.10:42430 (size: 23.2 KB, free: 1295.4 MB)
+17/08/29 15:02:22 INFO TaskSetManager: Starting task 2.0 in stage 0.0 (TID 2, 10.0.0.10, executor 0, partition 2, ANY, 4877 bytes)
+17/08/29 15:02:22 INFO TaskSetManager: Finished task 1.0 in stage 0.0 (TID 1) in 8593 ms on 10.0.0.10 (executor 0) (1/18)
+17/08/29 15:02:22 INFO TaskSetManager: Starting task 3.0 in stage 0.0 (TID 3, 10.0.0.10, executor 0, partition 3, ANY, 4877 bytes)
+17/08/29 15:02:22 INFO TaskSetManager: Finished task 0.0 in stage 0.0 (TID 0) in 8693 ms on 10.0.0.10 (executor 0) (2/18)
+17/08/29 15:02:27 INFO TaskSetManager: Starting task 4.0 in stage 0.0 (TID 4, 10.0.0.10, executor 0, partition 4, ANY, 4877 bytes)
+17/08/29 15:02:27 INFO TaskSetManager: Finished task 2.0 in stage 0.0 (TID 2) in 4652 ms on 10.0.0.10 (executor 0) (3/18)
+17/08/29 15:02:27 INFO TaskSetManager: Starting task 5.0 in stage 0.0 (TID 5, 10.0.0.10, executor 0, partition 5, ANY, 4877 bytes)
+17/08/29 15:02:27 INFO TaskSetManager: Finished task 3.0 in stage 0.0 (TID 3) in 5194 ms on 10.0.0.10 (executor 0) (4/18)
+17/08/29 15:02:31 INFO TaskSetManager: Starting task 6.0 in stage 0.0 (TID 6, 10.0.0.10, executor 0, partition 6, ANY, 4877 bytes)
+17/08/29 15:02:31 INFO TaskSetManager: Finished task 4.0 in stage 0.0 (TID 4) in 4577 ms on 10.0.0.10 (executor 0) (5/18)
+17/08/29 15:02:32 INFO TaskSetManager: Starting task 7.0 in stage 0.0 (TID 7, 10.0.0.10, executor 0, partition 7, ANY, 4877 bytes)
+17/08/29 15:02:32 INFO TaskSetManager: Finished task 5.0 in stage 0.0 (TID 5) in 4941 ms on 10.0.0.10 (executor 0) (6/18)
+17/08/29 15:02:36 INFO TaskSetManager: Starting task 8.0 in stage 0.0 (TID 8, 10.0.0.10, executor 0, partition 8, ANY, 4877 bytes)
+17/08/29 15:02:36 INFO TaskSetManager: Finished task 6.0 in stage 0.0 (TID 6) in 4645 ms on 10.0.0.10 (executor 0) (7/18)
+17/08/29 15:02:37 INFO TaskSetManager: Starting task 9.0 in stage 0.0 (TID 9, 10.0.0.10, executor 0, partition 9, ANY, 4877 bytes)
+17/08/29 15:02:37 INFO TaskSetManager: Finished task 7.0 in stage 0.0 (TID 7) in 4406 ms on 10.0.0.10 (executor 0) (8/18)
+17/08/29 15:02:40 INFO TaskSetManager: Starting task 10.0 in stage 0.0 (TID 10, 10.0.0.10, executor 0, partition 10, ANY, 4877 bytes)
+17/08/29 15:02:40 INFO TaskSetManager: Finished task 8.0 in stage 0.0 (TID 8) in 4447 ms on 10.0.0.10 (executor 0) (9/18)
+17/08/29 15:02:41 INFO TaskSetManager: Starting task 11.0 in stage 0.0 (TID 11, 10.0.0.10, executor 0, partition 11, ANY, 4877 bytes)
+17/08/29 15:02:41 INFO TaskSetManager: Finished task 9.0 in stage 0.0 (TID 9) in 4677 ms on 10.0.0.10 (executor 0) (10/18)
+17/08/29 15:02:45 INFO TaskSetManager: Starting task 12.0 in stage 0.0 (TID 12, 10.0.0.10, executor 0, partition 12, ANY, 4877 bytes)
+17/08/29 15:02:45 INFO TaskSetManager: Finished task 10.0 in stage 0.0 (TID 10) in 4428 ms on 10.0.0.10 (executor 0) (11/18)
+17/08/29 15:02:46 INFO TaskSetManager: Starting task 13.0 in stage 0.0 (TID 13, 10.0.0.10, executor 0, partition 13, ANY, 4877 bytes)
+17/08/29 15:02:46 INFO TaskSetManager: Finished task 11.0 in stage 0.0 (TID 11) in 4092 ms on 10.0.0.10 (executor 0) (12/18)
+17/08/29 15:02:49 INFO TaskSetManager: Starting task 14.0 in stage 0.0 (TID 14, 10.0.0.10, executor 0, partition 14, ANY, 4877 bytes)
+17/08/29 15:02:49 INFO TaskSetManager: Finished task 12.0 in stage 0.0 (TID 12) in 3862 ms on 10.0.0.10 (executor 0) (13/18)
+17/08/29 15:02:49 INFO TaskSetManager: Starting task 15.0 in stage 0.0 (TID 15, 10.0.0.10, executor 0, partition 15, ANY, 4877 bytes)
+17/08/29 15:02:49 INFO TaskSetManager: Finished task 13.0 in stage 0.0 (TID 13) in 3857 ms on 10.0.0.10 (executor 0) (14/18)
+17/08/29 15:02:52 INFO TaskSetManager: Starting task 16.0 in stage 0.0 (TID 16, 10.0.0.10, executor 0, partition 16, ANY, 4877 bytes)
+17/08/29 15:02:52 INFO TaskSetManager: Finished task 14.0 in stage 0.0 (TID 14) in 3641 ms on 10.0.0.10 (executor 0) (15/18)
+17/08/29 15:02:54 INFO TaskSetManager: Starting task 17.0 in stage 0.0 (TID 17, 10.0.0.10, executor 0, partition 17, ANY, 4877 bytes)
+17/08/29 15:02:54 INFO TaskSetManager: Finished task 15.0 in stage 0.0 (TID 15) in 4806 ms on 10.0.0.10 (executor 0) (16/18)
+17/08/29 15:02:55 INFO TaskSetManager: Finished task 17.0 in stage 0.0 (TID 17) in 574 ms on 10.0.0.10 (executor 0) (17/18)
+17/08/29 15:02:56 INFO TaskSetManager: Finished task 16.0 in stage 0.0 (TID 16) in 4022 ms on 10.0.0.10 (executor 0) (18/18)
+17/08/29 15:02:56 INFO TaskSchedulerImpl: Removed TaskSet 0.0, whose tasks have all completed, from pool 
+17/08/29 15:02:56 INFO DAGScheduler: ShuffleMapStage 0 (map at Word2Vec.scala:187) finished in 42.864 s
+17/08/29 15:02:56 INFO DAGScheduler: looking for newly runnable stages
+17/08/29 15:02:56 INFO DAGScheduler: running: Set()
+17/08/29 15:02:56 INFO DAGScheduler: waiting: Set(ResultStage 1)
+17/08/29 15:02:56 INFO DAGScheduler: failed: Set()
+17/08/29 15:02:56 INFO DAGScheduler: Submitting ResultStage 1 (MapPartitionsRDD[7] at map at Word2Vec.scala:190), which has no missing parents
+17/08/29 15:02:56 INFO MemoryStore: Block broadcast_2 stored as values in memory (estimated size 4.8 KB, free 366.0 MB)
+17/08/29 15:02:56 INFO MemoryStore: Block broadcast_2_piece0 stored as bytes in memory (estimated size 2.6 KB, free 366.0 MB)
+17/08/29 15:02:56 INFO BlockManagerInfo: Added broadcast_2_piece0 in memory on 10.0.0.15:33205 (size: 2.6 KB, free: 366.3 MB)
+17/08/29 15:02:56 INFO SparkContext: Created broadcast 2 from broadcast at DAGScheduler.scala:1006
+17/08/29 15:02:56 INFO DAGScheduler: Submitting 18 missing tasks from ResultStage 1 (MapPartitionsRDD[7] at map at Word2Vec.scala:190) (first 15 tasks are for partitions Vector(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14))
+17/08/29 15:02:56 INFO TaskSchedulerImpl: Adding task set 1.0 with 18 tasks
+17/08/29 15:02:56 INFO TaskSetManager: Starting task 0.0 in stage 1.0 (TID 18, 10.0.0.10, executor 0, partition 0, NODE_LOCAL, 4625 bytes)
+17/08/29 15:02:56 INFO TaskSetManager: Starting task 1.0 in stage 1.0 (TID 19, 10.0.0.10, executor 0, partition 1, NODE_LOCAL, 4625 bytes)
+17/08/29 15:02:57 INFO BlockManagerInfo: Added broadcast_2_piece0 in memory on 10.0.0.10:42430 (size: 2.6 KB, free: 1295.4 MB)
+17/08/29 15:02:57 INFO MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 0 to 10.0.0.10:52624
+17/08/29 15:02:57 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 0 is 209 bytes
+17/08/29 15:02:58 INFO BlockManagerInfo: Added taskresult_19 in memory on 10.0.0.10:42430 (size: 4.0 MB, free: 1291.4 MB)
+17/08/29 15:02:58 INFO TaskSetManager: Starting task 2.0 in stage 1.0 (TID 20, 10.0.0.10, executor 0, partition 2, NODE_LOCAL, 4625 bytes)
+17/08/29 15:02:58 INFO TransportClientFactory: Successfully created connection to /10.0.0.10:42430 after 3 ms (0 ms spent in bootstraps)
+17/08/29 15:02:58 INFO BlockManagerInfo: Added taskresult_18 in memory on 10.0.0.10:42430 (size: 3.9 MB, free: 1287.5 MB)
+17/08/29 15:02:58 INFO TaskSetManager: Starting task 3.0 in stage 1.0 (TID 21, 10.0.0.10, executor 0, partition 3, NODE_LOCAL, 4625 bytes)
+17/08/29 15:02:58 INFO TaskSetManager: Finished task 0.0 in stage 1.0 (TID 18) in 1777 ms on 10.0.0.10 (executor 0) (1/18)
+17/08/29 15:02:58 INFO TaskSetManager: Finished task 1.0 in stage 1.0 (TID 19) in 1788 ms on 10.0.0.10 (executor 0) (2/18)
+17/08/29 15:02:58 INFO BlockManagerInfo: Removed taskresult_18 on 10.0.0.10:42430 in memory (size: 3.9 MB, free: 1291.4 MB)
+17/08/29 15:02:58 INFO BlockManagerInfo: Removed taskresult_19 on 10.0.0.10:42430 in memory (size: 4.0 MB, free: 1295.4 MB)
+17/08/29 15:02:59 INFO BlockManagerInfo: Added taskresult_21 in memory on 10.0.0.10:42430 (size: 3.9 MB, free: 1291.5 MB)
+17/08/29 15:02:59 INFO TaskSetManager: Starting task 4.0 in stage 1.0 (TID 22, 10.0.0.10, executor 0, partition 4, NODE_LOCAL, 4625 bytes)
+17/08/29 15:02:59 INFO TaskSetManager: Finished task 3.0 in stage 1.0 (TID 21) in 1115 ms on 10.0.0.10 (executor 0) (3/18)
+17/08/29 15:02:59 INFO BlockManagerInfo: Removed taskresult_21 on 10.0.0.10:42430 in memory (size: 3.9 MB, free: 1295.4 MB)
+17/08/29 15:02:59 INFO BlockManagerInfo: Added taskresult_20 in memory on 10.0.0.10:42430 (size: 3.9 MB, free: 1291.4 MB)
+17/08/29 15:02:59 INFO TaskSetManager: Starting task 5.0 in stage 1.0 (TID 23, 10.0.0.10, executor 0, partition 5, NODE_LOCAL, 4625 bytes)
+17/08/29 15:02:59 INFO TaskSetManager: Finished task 2.0 in stage 1.0 (TID 20) in 1366 ms on 10.0.0.10 (executor 0) (4/18)
+17/08/29 15:02:59 INFO BlockManagerInfo: Removed taskresult_20 on 10.0.0.10:42430 in memory (size: 3.9 MB, free: 1295.4 MB)
+17/08/29 15:03:00 INFO BlockManagerInfo: Added taskresult_23 in memory on 10.0.0.10:42430 (size: 4.0 MB, free: 1291.4 MB)
+17/08/29 15:03:00 INFO TaskSetManager: Starting task 6.0 in stage 1.0 (TID 24, 10.0.0.10, executor 0, partition 6, NODE_LOCAL, 4625 bytes)
+17/08/29 15:03:00 INFO BlockManagerInfo: Added taskresult_22 in memory on 10.0.0.10:42430 (size: 3.9 MB, free: 1287.5 MB)
+17/08/29 15:03:00 INFO TaskSetManager: Starting task 7.0 in stage 1.0 (TID 25, 10.0.0.10, executor 0, partition 7, NODE_LOCAL, 4625 bytes)
+17/08/29 15:03:00 INFO TaskSetManager: Finished task 5.0 in stage 1.0 (TID 23) in 1101 ms on 10.0.0.10 (executor 0) (5/18)
+17/08/29 15:03:00 INFO BlockManagerInfo: Removed taskresult_23 on 10.0.0.10:42430 in memory (size: 4.0 MB, free: 1291.5 MB)
+17/08/29 15:03:01 INFO TaskSetManager: Finished task 4.0 in stage 1.0 (TID 22) in 1348 ms on 10.0.0.10 (executor 0) (6/18)
+17/08/29 15:03:01 INFO BlockManagerInfo: Removed taskresult_22 on 10.0.0.10:42430 in memory (size: 3.9 MB, free: 1295.4 MB)
+17/08/29 15:03:01 INFO BlockManagerInfo: Removed broadcast_1_piece0 on 10.0.0.10:42430 in memory (size: 2.8 KB, free: 1295.4 MB)
+17/08/29 15:03:01 INFO BlockManagerInfo: Removed broadcast_1_piece0 on 10.0.0.15:33205 in memory (size: 2.8 KB, free: 366.3 MB)
+17/08/29 15:03:01 INFO BlockManagerInfo: Added taskresult_24 in memory on 10.0.0.10:42430 (size: 4.0 MB, free: 1291.3 MB)
+17/08/29 15:03:01 INFO TaskSetManager: Starting task 8.0 in stage 1.0 (TID 26, 10.0.0.10, executor 0, partition 8, NODE_LOCAL, 4625 bytes)
+17/08/29 15:03:01 INFO TaskSetManager: Finished task 6.0 in stage 1.0 (TID 24) in 964 ms on 10.0.0.10 (executor 0) (7/18)
+17/08/29 15:03:01 INFO BlockManagerInfo: Removed taskresult_24 on 10.0.0.10:42430 in memory (size: 4.0 MB, free: 1295.4 MB)
+17/08/29 15:03:01 INFO BlockManagerInfo: Added taskresult_25 in memory on 10.0.0.10:42430 (size: 3.9 MB, free: 1291.4 MB)
+17/08/29 15:03:01 INFO TaskSetManager: Starting task 9.0 in stage 1.0 (TID 27, 10.0.0.10, executor 0, partition 9, NODE_LOCAL, 4625 bytes)
+17/08/29 15:03:01 INFO BlockManagerInfo: Removed taskresult_25 on 10.0.0.10:42430 in memory (size: 3.9 MB, free: 1295.4 MB)
+17/08/29 15:03:01 INFO TaskSetManager: Finished task 7.0 in stage 1.0 (TID 25) in 1102 ms on 10.0.0.10 (executor 0) (8/18)
+17/08/29 15:03:02 INFO BlockManagerInfo: Added taskresult_26 in memory on 10.0.0.10:42430 (size: 3.9 MB, free: 1291.4 MB)
+17/08/29 15:03:02 INFO TaskSetManager: Starting task 10.0 in stage 1.0 (TID 28, 10.0.0.10, executor 0, partition 10, NODE_LOCAL, 4625 bytes)
+17/08/29 15:03:02 INFO TaskSetManager: Finished task 8.0 in stage 1.0 (TID 26) in 1234 ms on 10.0.0.10 (executor 0) (9/18)
+17/08/29 15:03:03 INFO BlockManagerInfo: Removed taskresult_26 on 10.0.0.10:42430 in memory (size: 3.9 MB, free: 1295.4 MB)
+17/08/29 15:03:03 INFO BlockManagerInfo: Added taskresult_27 in memory on 10.0.0.10:42430 (size: 4.0 MB, free: 1291.4 MB)
+17/08/29 15:03:03 INFO TaskSetManager: Starting task 11.0 in stage 1.0 (TID 29, 10.0.0.10, executor 0, partition 11, NODE_LOCAL, 4625 bytes)
+17/08/29 15:03:03 INFO TaskSetManager: Finished task 9.0 in stage 1.0 (TID 27) in 1216 ms on 10.0.0.10 (executor 0) (10/18)
+17/08/29 15:03:03 INFO BlockManagerInfo: Removed taskresult_27 on 10.0.0.10:42430 in memory (size: 4.0 MB, free: 1295.4 MB)
+17/08/29 15:03:04 INFO BlockManagerInfo: Added taskresult_28 in memory on 10.0.0.10:42430 (size: 3.9 MB, free: 1291.5 MB)
+17/08/29 15:03:04 INFO TaskSetManager: Starting task 12.0 in stage 1.0 (TID 30, 10.0.0.10, executor 0, partition 12, NODE_LOCAL, 4625 bytes)
+17/08/29 15:03:04 INFO TaskSetManager: Finished task 10.0 in stage 1.0 (TID 28) in 1203 ms on 10.0.0.10 (executor 0) (11/18)
+17/08/29 15:03:04 INFO BlockManagerInfo: Removed taskresult_28 on 10.0.0.10:42430 in memory (size: 3.9 MB, free: 1295.4 MB)
+17/08/29 15:03:04 INFO BlockManagerInfo: Added taskresult_29 in memory on 10.0.0.10:42430 (size: 3.9 MB, free: 1291.4 MB)
+17/08/29 15:03:04 INFO TaskSetManager: Starting task 13.0 in stage 1.0 (TID 31, 10.0.0.10, executor 0, partition 13, NODE_LOCAL, 4625 bytes)
+17/08/29 15:03:04 INFO TaskSetManager: Finished task 11.0 in stage 1.0 (TID 29) in 1143 ms on 10.0.0.10 (executor 0) (12/18)
+17/08/29 15:03:04 INFO BlockManagerInfo: Removed taskresult_29 on 10.0.0.10:42430 in memory (size: 3.9 MB, free: 1295.4 MB)
+17/08/29 15:03:05 INFO BlockManagerInfo: Added taskresult_30 in memory on 10.0.0.10:42430 (size: 4.0 MB, free: 1291.4 MB)
+17/08/29 15:03:05 INFO TaskSetManager: Starting task 14.0 in stage 1.0 (TID 32, 10.0.0.10, executor 0, partition 14, NODE_LOCAL, 4625 bytes)
+17/08/29 15:03:05 INFO BlockManagerInfo: Added taskresult_31 in memory on 10.0.0.10:42430 (size: 3.9 MB, free: 1287.5 MB)
+17/08/29 15:03:05 INFO TaskSetManager: Starting task 15.0 in stage 1.0 (TID 33, 10.0.0.10, executor 0, partition 15, NODE_LOCAL, 4625 bytes)
+17/08/29 15:03:05 INFO TaskSetManager: Finished task 12.0 in stage 1.0 (TID 30) in 1588 ms on 10.0.0.10 (executor 0) (13/18)
+17/08/29 15:03:05 INFO BlockManagerInfo: Removed taskresult_30 on 10.0.0.10:42430 in memory (size: 4.0 MB, free: 1291.4 MB)
+17/08/29 15:03:05 INFO TaskSetManager: Finished task 13.0 in stage 1.0 (TID 31) in 1550 ms on 10.0.0.10 (executor 0) (14/18)
+17/08/29 15:03:05 INFO BlockManagerInfo: Removed taskresult_31 on 10.0.0.10:42430 in memory (size: 3.9 MB, free: 1295.4 MB)
+17/08/29 15:03:06 INFO BlockManagerInfo: Added taskresult_32 in memory on 10.0.0.10:42430 (size: 4.0 MB, free: 1291.4 MB)
+17/08/29 15:03:06 INFO TaskSetManager: Starting task 16.0 in stage 1.0 (TID 34, 10.0.0.10, executor 0, partition 16, NODE_LOCAL, 4625 bytes)
+17/08/29 15:03:06 INFO BlockManagerInfo: Added taskresult_33 in memory on 10.0.0.10:42430 (size: 3.9 MB, free: 1287.5 MB)
+17/08/29 15:03:06 INFO TaskSetManager: Starting task 17.0 in stage 1.0 (TID 35, 10.0.0.10, executor 0, partition 17, NODE_LOCAL, 4625 bytes)
+17/08/29 15:03:06 INFO TaskSetManager: Finished task 14.0 in stage 1.0 (TID 32) in 1018 ms on 10.0.0.10 (executor 0) (15/18)
+17/08/29 15:03:06 INFO BlockManagerInfo: Removed taskresult_32 on 10.0.0.10:42430 in memory (size: 4.0 MB, free: 1291.5 MB)
+17/08/29 15:03:06 INFO TaskSetManager: Finished task 15.0 in stage 1.0 (TID 33) in 1025 ms on 10.0.0.10 (executor 0) (16/18)
+17/08/29 15:03:06 INFO BlockManagerInfo: Removed taskresult_33 on 10.0.0.10:42430 in memory (size: 3.9 MB, free: 1295.4 MB)
+17/08/29 15:03:07 INFO BlockManagerInfo: Added taskresult_35 in memory on 10.0.0.10:42430 (size: 3.9 MB, free: 1291.4 MB)
+17/08/29 15:03:07 INFO BlockManagerInfo: Added taskresult_34 in memory on 10.0.0.10:42430 (size: 3.9 MB, free: 1287.5 MB)
+17/08/29 15:03:07 INFO TaskSetManager: Finished task 17.0 in stage 1.0 (TID 35) in 967 ms on 10.0.0.10 (executor 0) (17/18)
+17/08/29 15:03:07 INFO BlockManagerInfo: Removed taskresult_35 on 10.0.0.10:42430 in memory (size: 3.9 MB, free: 1291.5 MB)
+17/08/29 15:03:07 INFO TaskSetManager: Finished task 16.0 in stage 1.0 (TID 34) in 1007 ms on 10.0.0.10 (executor 0) (18/18)
+17/08/29 15:03:07 INFO TaskSchedulerImpl: Removed TaskSet 1.0, whose tasks have all completed, from pool 
+17/08/29 15:03:07 INFO DAGScheduler: ResultStage 1 (collect at Word2Vec.scala:196) finished in 10.610 s
+17/08/29 15:03:07 INFO BlockManagerInfo: Removed taskresult_34 on 10.0.0.10:42430 in memory (size: 3.9 MB, free: 1295.4 MB)
+17/08/29 15:03:07 INFO DAGScheduler: Job 0 finished: collect at Word2Vec.scala:196, took 53.842942 s
+17/08/29 15:03:07 INFO Word2Vec: vocabSize = 178780, trainWordsCount = 29582216
+17/08/29 15:03:07 INFO MemoryStore: Block broadcast_3 stored as values in memory (estimated size 3.9 KB, free 366.0 MB)
+17/08/29 15:03:07 INFO MemoryStore: Block broadcast_3_piece0 stored as bytes in memory (estimated size 4.0 KB, free 366.0 MB)
+17/08/29 15:03:07 INFO BlockManagerInfo: Added broadcast_3_piece0 in memory on 10.0.0.15:33205 (size: 4.0 KB, free: 366.3 MB)
+17/08/29 15:03:07 INFO SparkContext: Created broadcast 3 from broadcast at Word2Vec.scala:315
+17/08/29 15:03:08 INFO MemoryStore: Block broadcast_4 stored as values in memory (estimated size 82.1 MB, free 283.9 MB)
+17/08/29 15:03:08 INFO MemoryStore: Block broadcast_4_piece0 stored as bytes in memory (estimated size 4.0 MB, free 279.9 MB)
+17/08/29 15:03:08 INFO BlockManagerInfo: Added broadcast_4_piece0 in memory on 10.0.0.15:33205 (size: 4.0 MB, free: 362.3 MB)
+17/08/29 15:03:08 INFO MemoryStore: Block broadcast_4_piece1 stored as bytes in memory (estimated size 4.0 MB, free 275.9 MB)
+17/08/29 15:03:08 INFO BlockManagerInfo: Added broadcast_4_piece1 in memory on 10.0.0.15:33205 (size: 4.0 MB, free: 358.3 MB)
+17/08/29 15:03:08 INFO MemoryStore: Block broadcast_4_piece2 stored as bytes in memory (estimated size 3.0 MB, free 272.9 MB)
+17/08/29 15:03:08 INFO BlockManagerInfo: Added broadcast_4_piece2 in memory on 10.0.0.15:33205 (size: 3.0 MB, free: 355.2 MB)
+17/08/29 15:03:08 INFO SparkContext: Created broadcast 4 from broadcast at Word2Vec.scala:316
+17/08/29 15:03:08 INFO MemoryStore: Block broadcast_5 stored as values in memory (estimated size 20.2 MB, free 252.7 MB)
+17/08/29 15:03:08 INFO MemoryStore: Block broadcast_5_piece0 stored as bytes in memory (estimated size 4.0 MB, free 248.7 MB)
+17/08/29 15:03:08 INFO BlockManagerInfo: Added broadcast_5_piece0 in memory on 10.0.0.15:33205 (size: 4.0 MB, free: 351.2 MB)
+17/08/29 15:03:08 INFO MemoryStore: Block broadcast_5_piece1 stored as bytes in memory (estimated size 2.2 MB, free 246.5 MB)
+17/08/29 15:03:08 INFO BlockManagerInfo: Added broadcast_5_piece1 in memory on 10.0.0.15:33205 (size: 2.2 MB, free: 349.0 MB)
+17/08/29 15:03:08 INFO SparkContext: Created broadcast 5 from broadcast at Word2Vec.scala:317
+17/08/29 15:03:09 INFO MemoryStore: Block broadcast_6 stored as values in memory (estimated size 68.2 MB, free 178.3 MB)
+17/08/29 15:03:09 INFO BlockManagerInfo: Removed broadcast_2_piece0 on 10.0.0.15:33205 in memory (size: 2.6 KB, free: 349.0 MB)
+17/08/29 15:03:09 INFO BlockManagerInfo: Removed broadcast_2_piece0 on 10.0.0.10:42430 in memory (size: 2.6 KB, free: 1295.4 MB)
+17/08/29 15:03:09 INFO ContextCleaner: Cleaned shuffle 0
+17/08/29 15:03:09 INFO MemoryStore: Block broadcast_6_piece0 stored as bytes in memory (estimated size 4.0 MB, free 174.3 MB)
+17/08/29 15:03:09 INFO BlockManagerInfo: Added broadcast_6_piece0 in memory on 10.0.0.15:33205 (size: 4.0 MB, free: 345.0 MB)
+17/08/29 15:03:09 INFO MemoryStore: Block broadcast_6_piece1 stored as bytes in memory (estimated size 4.0 MB, free 170.3 MB)
+17/08/29 15:03:09 INFO BlockManagerInfo: Added broadcast_6_piece1 in memory on 10.0.0.15:33205 (size: 4.0 MB, free: 341.0 MB)
+17/08/29 15:03:09 INFO MemoryStore: Block broadcast_6_piece2 stored as bytes in memory (estimated size 4.0 MB, free 166.3 MB)
+17/08/29 15:03:09 INFO BlockManagerInfo: Added broadcast_6_piece2 in memory on 10.0.0.15:33205 (size: 4.0 MB, free: 337.0 MB)
+17/08/29 15:03:09 INFO MemoryStore: Block broadcast_6_piece3 stored as bytes in memory (estimated size 4.0 MB, free 162.3 MB)
+17/08/29 15:03:09 INFO BlockManagerInfo: Added broadcast_6_piece3 in memory on 10.0.0.15:33205 (size: 4.0 MB, free: 333.0 MB)
+17/08/29 15:03:09 INFO MemoryStore: Block broadcast_6_piece4 stored as bytes in memory (estimated size 4.0 MB, free 158.3 MB)
+17/08/29 15:03:09 INFO BlockManagerInfo: Added broadcast_6_piece4 in memory on 10.0.0.15:33205 (size: 4.0 MB, free: 329.0 MB)
+17/08/29 15:03:09 INFO MemoryStore: Block broadcast_6_piece5 stored as bytes in memory (estimated size 4.0 MB, free 154.3 MB)
+17/08/29 15:03:09 INFO BlockManagerInfo: Added broadcast_6_piece5 in memory on 10.0.0.15:33205 (size: 4.0 MB, free: 325.0 MB)
+17/08/29 15:03:09 INFO MemoryStore: Block broadcast_6_piece6 stored as bytes in memory (estimated size 4.0 MB, free 150.3 MB)
+17/08/29 15:03:09 INFO BlockManagerInfo: Added broadcast_6_piece6 in memory on 10.0.0.15:33205 (size: 4.0 MB, free: 321.0 MB)
+17/08/29 15:03:09 INFO MemoryStore: Block broadcast_6_piece7 stored as bytes in memory (estimated size 4.0 MB, free 146.3 MB)
+17/08/29 15:03:09 INFO BlockManagerInfo: Added broadcast_6_piece7 in memory on 10.0.0.15:33205 (size: 4.0 MB, free: 317.0 MB)
+17/08/29 15:03:09 INFO MemoryStore: Block broadcast_6_piece8 stored as bytes in memory (estimated size 4.0 MB, free 142.3 MB)
+17/08/29 15:03:09 INFO BlockManagerInfo: Added broadcast_6_piece8 in memory on 10.0.0.15:33205 (size: 4.0 MB, free: 313.0 MB)
+17/08/29 15:03:09 INFO MemoryStore: Block broadcast_6_piece9 stored as bytes in memory (estimated size 4.0 MB, free 138.3 MB)
+17/08/29 15:03:09 INFO BlockManagerInfo: Added broadcast_6_piece9 in memory on 10.0.0.15:33205 (size: 4.0 MB, free: 309.0 MB)
+17/08/29 15:03:09 INFO MemoryStore: Block broadcast_6_piece10 stored as bytes in memory (estimated size 4.0 MB, free 134.3 MB)
+17/08/29 15:03:09 INFO BlockManagerInfo: Added broadcast_6_piece10 in memory on 10.0.0.15:33205 (size: 4.0 MB, free: 305.0 MB)
+17/08/29 15:03:09 INFO MemoryStore: Block broadcast_6_piece11 stored as bytes in memory (estimated size 4.0 MB, free 130.3 MB)
+17/08/29 15:03:09 INFO BlockManagerInfo: Added broadcast_6_piece11 in memory on 10.0.0.15:33205 (size: 4.0 MB, free: 301.0 MB)
+17/08/29 15:03:09 INFO MemoryStore: Block broadcast_6_piece12 stored as bytes in memory (estimated size 4.0 MB, free 126.3 MB)
+17/08/29 15:03:09 INFO BlockManagerInfo: Added broadcast_6_piece12 in memory on 10.0.0.15:33205 (size: 4.0 MB, free: 297.0 MB)
+17/08/29 15:03:09 INFO MemoryStore: Block broadcast_6_piece13 stored as bytes in memory (estimated size 4.0 MB, free 122.3 MB)
+17/08/29 15:03:09 INFO BlockManagerInfo: Added broadcast_6_piece13 in memory on 10.0.0.15:33205 (size: 4.0 MB, free: 293.0 MB)
+17/08/29 15:03:09 INFO MemoryStore: Block broadcast_6_piece14 stored as bytes in memory (estimated size 4.0 MB, free 118.3 MB)
+17/08/29 15:03:09 INFO BlockManagerInfo: Added broadcast_6_piece14 in memory on 10.0.0.15:33205 (size: 4.0 MB, free: 289.0 MB)
+17/08/29 15:03:09 INFO MemoryStore: Block broadcast_6_piece15 stored as bytes in memory (estimated size 4.0 MB, free 114.3 MB)
+17/08/29 15:03:09 INFO BlockManagerInfo: Added broadcast_6_piece15 in memory on 10.0.0.15:33205 (size: 4.0 MB, free: 285.0 MB)
+17/08/29 15:03:09 INFO MemoryStore: Block broadcast_6_piece16 stored as bytes in memory (estimated size 4.0 MB, free 110.3 MB)
+17/08/29 15:03:09 INFO BlockManagerInfo: Added broadcast_6_piece16 in memory on 10.0.0.15:33205 (size: 4.0 MB, free: 281.0 MB)
+17/08/29 15:03:09 INFO MemoryStore: Block broadcast_6_piece17 stored as bytes in memory (estimated size 248.8 KB, free 110.1 MB)
+17/08/29 15:03:09 INFO BlockManagerInfo: Added broadcast_6_piece17 in memory on 10.0.0.15:33205 (size: 248.8 KB, free: 280.8 MB)
+17/08/29 15:03:09 INFO SparkContext: Created broadcast 6 from broadcast at Word2Vec.scala:359
+17/08/29 15:03:09 INFO MemoryStore: Block broadcast_7 stored as values in memory (estimated size 68.2 MB, free 41.9 MB)
+17/08/29 15:03:09 INFO MemoryStore: Block broadcast_7_piece0 stored as bytes in memory (estimated size 341.1 KB, free 41.5 MB)
+17/08/29 15:03:09 INFO BlockManagerInfo: Added broadcast_7_piece0 in memory on 10.0.0.15:33205 (size: 341.1 KB, free: 280.4 MB)
+17/08/29 15:03:09 INFO SparkContext: Created broadcast 7 from broadcast at Word2Vec.scala:360
+17/08/29 15:03:09 INFO SparkContext: Starting job: collect at Word2Vec.scala:438
+17/08/29 15:03:09 INFO DAGScheduler: Registering RDD 9 (repartition at Word2Vec.scala:344)
+17/08/29 15:03:09 INFO DAGScheduler: Registering RDD 13 (mapPartitionsWithIndex at Word2Vec.scala:361)
+17/08/29 15:03:09 INFO DAGScheduler: Got job 1 (collect at Word2Vec.scala:438) with 1 output partitions
+17/08/29 15:03:09 INFO DAGScheduler: Final stage: ResultStage 4 (collect at Word2Vec.scala:438)
+17/08/29 15:03:09 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 3)
+17/08/29 15:03:09 INFO DAGScheduler: Missing parents: List(ShuffleMapStage 3)
+17/08/29 15:03:09 INFO DAGScheduler: Submitting ShuffleMapStage 2 (MapPartitionsRDD[9] at repartition at Word2Vec.scala:344), which has no missing parents
+17/08/29 15:03:09 INFO MemoryStore: Block broadcast_8 stored as values in memory (estimated size 6.0 KB, free 41.5 MB)
+17/08/29 15:03:09 INFO MemoryStore: Block broadcast_8_piece0 stored as bytes in memory (estimated size 3.3 KB, free 41.5 MB)
+17/08/29 15:03:09 INFO BlockManagerInfo: Added broadcast_8_piece0 in memory on 10.0.0.15:33205 (size: 3.3 KB, free: 280.4 MB)
+17/08/29 15:03:09 INFO SparkContext: Created broadcast 8 from broadcast at DAGScheduler.scala:1006
+17/08/29 15:03:09 INFO DAGScheduler: Submitting 18 missing tasks from ShuffleMapStage 2 (MapPartitionsRDD[9] at repartition at Word2Vec.scala:344) (first 15 tasks are for partitions Vector(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14))
+17/08/29 15:03:09 INFO TaskSchedulerImpl: Adding task set 2.0 with 18 tasks
+17/08/29 15:03:09 INFO TaskSetManager: Starting task 0.0 in stage 2.0 (TID 36, 10.0.0.10, executor 0, partition 0, ANY, 4877 bytes)
+17/08/29 15:03:09 INFO TaskSetManager: Starting task 1.0 in stage 2.0 (TID 37, 10.0.0.10, executor 0, partition 1, ANY, 4877 bytes)
+17/08/29 15:03:09 INFO BlockManagerInfo: Added broadcast_8_piece0 in memory on 10.0.0.10:42430 (size: 3.3 KB, free: 1295.4 MB)
+17/08/29 15:03:09 INFO BlockManagerInfo: Added broadcast_5_piece0 in memory on 10.0.0.10:42430 (size: 4.0 MB, free: 1291.4 MB)
+17/08/29 15:03:09 INFO BlockManagerInfo: Added broadcast_5_piece1 in memory on 10.0.0.10:42430 (size: 2.2 MB, free: 1289.2 MB)
+17/08/29 15:03:12 INFO TaskSetManager: Starting task 2.0 in stage 2.0 (TID 38, 10.0.0.10, executor 0, partition 2, ANY, 4877 bytes)
+17/08/29 15:03:12 INFO TaskSetManager: Finished task 1.0 in stage 2.0 (TID 37) in 2893 ms on 10.0.0.10 (executor 0) (1/18)
+17/08/29 15:03:13 INFO TaskSetManager: Starting task 3.0 in stage 2.0 (TID 39, 10.0.0.10, executor 0, partition 3, ANY, 4877 bytes)
+17/08/29 15:03:13 INFO TaskSetManager: Finished task 0.0 in stage 2.0 (TID 36) in 3216 ms on 10.0.0.10 (executor 0) (2/18)
+17/08/29 15:03:14 INFO TaskSetManager: Starting task 4.0 in stage 2.0 (TID 40, 10.0.0.10, executor 0, partition 4, ANY, 4877 bytes)
+17/08/29 15:03:14 INFO TaskSetManager: Finished task 2.0 in stage 2.0 (TID 38) in 2075 ms on 10.0.0.10 (executor 0) (3/18)
+17/08/29 15:03:15 INFO TaskSetManager: Finished task 3.0 in stage 2.0 (TID 39) in 2204 ms on 10.0.0.10 (executor 0) (4/18)
+17/08/29 15:03:15 INFO TaskSetManager: Starting task 5.0 in stage 2.0 (TID 41, 10.0.0.10, executor 0, partition 5, ANY, 4877 bytes)
+17/08/29 15:03:16 INFO TaskSetManager: Starting task 6.0 in stage 2.0 (TID 42, 10.0.0.10, executor 0, partition 6, ANY, 4877 bytes)
+17/08/29 15:03:16 INFO TaskSetManager: Finished task 4.0 in stage 2.0 (TID 40) in 2147 ms on 10.0.0.10 (executor 0) (5/18)
+17/08/29 15:03:17 INFO TaskSetManager: Starting task 7.0 in stage 2.0 (TID 43, 10.0.0.10, executor 0, partition 7, ANY, 4877 bytes)
+17/08/29 15:03:17 INFO TaskSetManager: Finished task 5.0 in stage 2.0 (TID 41) in 2167 ms on 10.0.0.10 (executor 0) (6/18)
+17/08/29 15:03:19 INFO TaskSetManager: Finished task 6.0 in stage 2.0 (TID 42) in 2371 ms on 10.0.0.10 (executor 0) (7/18)
+17/08/29 15:03:19 INFO TaskSetManager: Starting task 8.0 in stage 2.0 (TID 44, 10.0.0.10, executor 0, partition 8, ANY, 4877 bytes)
+17/08/29 15:03:19 INFO TaskSetManager: Starting task 9.0 in stage 2.0 (TID 45, 10.0.0.10, executor 0, partition 9, ANY, 4877 bytes)
+17/08/29 15:03:19 INFO TaskSetManager: Finished task 7.0 in stage 2.0 (TID 43) in 2368 ms on 10.0.0.10 (executor 0) (8/18)
+17/08/29 15:03:21 INFO TaskSetManager: Starting task 10.0 in stage 2.0 (TID 46, 10.0.0.10, executor 0, partition 10, ANY, 4877 bytes)
+17/08/29 15:03:21 INFO TaskSetManager: Finished task 8.0 in stage 2.0 (TID 44) in 2296 ms on 10.0.0.10 (executor 0) (9/18)
+17/08/29 15:03:22 INFO TaskSetManager: Starting task 11.0 in stage 2.0 (TID 47, 10.0.0.10, executor 0, partition 11, ANY, 4877 bytes)
+17/08/29 15:03:22 INFO TaskSetManager: Finished task 9.0 in stage 2.0 (TID 45) in 2362 ms on 10.0.0.10 (executor 0) (10/18)
+17/08/29 15:03:24 INFO TaskSetManager: Starting task 12.0 in stage 2.0 (TID 48, 10.0.0.10, executor 0, partition 12, ANY, 4877 bytes)
+17/08/29 15:03:24 INFO TaskSetManager: Finished task 10.0 in stage 2.0 (TID 46) in 2480 ms on 10.0.0.10 (executor 0) (11/18)
+17/08/29 15:03:24 INFO TaskSetManager: Starting task 13.0 in stage 2.0 (TID 49, 10.0.0.10, executor 0, partition 13, ANY, 4877 bytes)
+17/08/29 15:03:24 INFO TaskSetManager: Finished task 11.0 in stage 2.0 (TID 47) in 2389 ms on 10.0.0.10 (executor 0) (12/18)
+17/08/29 15:03:26 INFO TaskSetManager: Starting task 14.0 in stage 2.0 (TID 50, 10.0.0.10, executor 0, partition 14, ANY, 4877 bytes)
+17/08/29 15:03:26 INFO TaskSetManager: Finished task 12.0 in stage 2.0 (TID 48) in 2127 ms on 10.0.0.10 (executor 0) (13/18)
+17/08/29 15:03:26 INFO TaskSetManager: Starting task 15.0 in stage 2.0 (TID 51, 10.0.0.10, executor 0, partition 15, ANY, 4877 bytes)
+17/08/29 15:03:26 INFO TaskSetManager: Finished task 13.0 in stage 2.0 (TID 49) in 2161 ms on 10.0.0.10 (executor 0) (14/18)
+17/08/29 15:03:28 INFO TaskSetManager: Starting task 16.0 in stage 2.0 (TID 52, 10.0.0.10, executor 0, partition 16, ANY, 4877 bytes)
+17/08/29 15:03:28 INFO TaskSetManager: Finished task 14.0 in stage 2.0 (TID 50) in 2395 ms on 10.0.0.10 (executor 0) (15/18)
+17/08/29 15:03:29 INFO TaskSetManager: Starting task 17.0 in stage 2.0 (TID 53, 10.0.0.10, executor 0, partition 17, ANY, 4877 bytes)
+17/08/29 15:03:29 INFO TaskSetManager: Finished task 15.0 in stage 2.0 (TID 51) in 2476 ms on 10.0.0.10 (executor 0) (16/18)
+17/08/29 15:03:29 INFO TaskSetManager: Finished task 17.0 in stage 2.0 (TID 53) in 584 ms on 10.0.0.10 (executor 0) (17/18)
+17/08/29 15:03:30 INFO TaskSetManager: Finished task 16.0 in stage 2.0 (TID 52) in 2236 ms on 10.0.0.10 (executor 0) (18/18)
+17/08/29 15:03:30 INFO TaskSchedulerImpl: Removed TaskSet 2.0, whose tasks have all completed, from pool 
+17/08/29 15:03:30 INFO DAGScheduler: ShuffleMapStage 2 (repartition at Word2Vec.scala:344) finished in 21.015 s
+17/08/29 15:03:30 INFO DAGScheduler: looking for newly runnable stages
+17/08/29 15:03:30 INFO DAGScheduler: running: Set()
+17/08/29 15:03:30 INFO DAGScheduler: waiting: Set(ShuffleMapStage 3, ResultStage 4)
+17/08/29 15:03:30 INFO DAGScheduler: failed: Set()
+17/08/29 15:03:30 INFO DAGScheduler: Submitting ShuffleMapStage 3 (MapPartitionsRDD[13] at mapPartitionsWithIndex at Word2Vec.scala:361), which has no missing parents
+17/08/29 15:03:30 INFO MemoryStore: Block broadcast_9 stored as values in memory (estimated size 6.4 KB, free 41.5 MB)
+17/08/29 15:03:30 INFO MemoryStore: Block broadcast_9_piece0 stored as bytes in memory (estimated size 3.5 KB, free 41.5 MB)
+17/08/29 15:03:30 INFO BlockManagerInfo: Added broadcast_9_piece0 in memory on 10.0.0.15:33205 (size: 3.5 KB, free: 280.4 MB)
+17/08/29 15:03:30 INFO SparkContext: Created broadcast 9 from broadcast at DAGScheduler.scala:1006
+17/08/29 15:03:30 INFO DAGScheduler: Submitting 1 missing tasks from ShuffleMapStage 3 (MapPartitionsRDD[13] at mapPartitionsWithIndex at Word2Vec.scala:361) (first 15 tasks are for partitions Vector(0))
+17/08/29 15:03:30 INFO TaskSchedulerImpl: Adding task set 3.0 with 1 tasks
+17/08/29 15:03:30 INFO TaskSetManager: Starting task 0.0 in stage 3.0 (TID 54, 10.0.0.10, executor 0, partition 0, NODE_LOCAL, 4890 bytes)
+17/08/29 15:03:30 INFO BlockManagerInfo: Added broadcast_9_piece0 in memory on 10.0.0.10:42430 (size: 3.5 KB, free: 1289.2 MB)
+17/08/29 15:03:30 INFO MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 1 to 10.0.0.10:52624
+17/08/29 15:03:30 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 1 is 164 bytes
+17/08/29 15:03:33 INFO BlockManagerInfo: Added rdd_12_0 in memory on 10.0.0.10:42430 (size: 225.8 MB, free: 1063.4 MB)
+17/08/29 15:03:33 INFO BlockManagerInfo: Added broadcast_6_piece15 in memory on 10.0.0.10:42430 (size: 4.0 MB, free: 1059.4 MB)
+17/08/29 15:03:33 INFO BlockManagerInfo: Added broadcast_6_piece7 in memory on 10.0.0.10:42430 (size: 4.0 MB, free: 1055.4 MB)
+17/08/29 15:03:33 INFO BlockManagerInfo: Added broadcast_6_piece17 in memory on 10.0.0.10:42430 (size: 248.8 KB, free: 1055.1 MB)
+17/08/29 15:03:33 INFO BlockManagerInfo: Added broadcast_6_piece13 in memory on 10.0.0.10:42430 (size: 4.0 MB, free: 1051.1 MB)
+17/08/29 15:03:33 INFO BlockManagerInfo: Added broadcast_6_piece4 in memory on 10.0.0.10:42430 (size: 4.0 MB, free: 1047.1 MB)
+17/08/29 15:03:33 INFO BlockManagerInfo: Added broadcast_6_piece8 in memory on 10.0.0.10:42430 (size: 4.0 MB, free: 1043.1 MB)
+17/08/29 15:03:33 INFO BlockManagerInfo: Added broadcast_6_piece3 in memory on 10.0.0.10:42430 (size: 4.0 MB, free: 1039.1 MB)
+17/08/29 15:03:33 INFO BlockManagerInfo: Added broadcast_6_piece14 in memory on 10.0.0.10:42430 (size: 4.0 MB, free: 1035.1 MB)
+17/08/29 15:03:33 INFO BlockManagerInfo: Added broadcast_6_piece0 in memory on 10.0.0.10:42430 (size: 4.0 MB, free: 1031.1 MB)
+17/08/29 15:03:33 INFO BlockManagerInfo: Added broadcast_6_piece10 in memory on 10.0.0.10:42430 (size: 4.0 MB, free: 1027.1 MB)
+17/08/29 15:03:33 INFO BlockManagerInfo: Added broadcast_6_piece16 in memory on 10.0.0.10:42430 (size: 4.0 MB, free: 1023.1 MB)
+17/08/29 15:03:33 INFO BlockManagerInfo: Added broadcast_6_piece6 in memory on 10.0.0.10:42430 (size: 4.0 MB, free: 1019.1 MB)
+17/08/29 15:03:33 INFO BlockManagerInfo: Added broadcast_6_piece12 in memory on 10.0.0.10:42430 (size: 4.0 MB, free: 1015.1 MB)
+17/08/29 15:03:33 INFO BlockManagerInfo: Added broadcast_6_piece11 in memory on 10.0.0.10:42430 (size: 4.0 MB, free: 1011.1 MB)
+17/08/29 15:03:33 INFO BlockManagerInfo: Added broadcast_6_piece9 in memory on 10.0.0.10:42430 (size: 4.0 MB, free: 1007.1 MB)
+17/08/29 15:03:33 INFO BlockManagerInfo: Added broadcast_6_piece1 in memory on 10.0.0.10:42430 (size: 4.0 MB, free: 1003.1 MB)
+17/08/29 15:03:33 INFO BlockManagerInfo: Added broadcast_6_piece5 in memory on 10.0.0.10:42430 (size: 4.0 MB, free: 999.1 MB)
+17/08/29 15:03:33 INFO BlockManagerInfo: Added broadcast_6_piece2 in memory on 10.0.0.10:42430 (size: 4.0 MB, free: 995.1 MB)
+17/08/29 15:03:35 INFO BlockManagerInfo: Added broadcast_7_piece0 in memory on 10.0.0.10:42430 (size: 341.1 KB, free: 994.8 MB)
+17/08/29 15:03:35 INFO BlockManagerInfo: Added broadcast_4_piece0 in memory on 10.0.0.10:42430 (size: 4.0 MB, free: 990.8 MB)
+17/08/29 15:03:35 INFO BlockManagerInfo: Added broadcast_4_piece1 in memory on 10.0.0.10:42430 (size: 4.0 MB, free: 986.8 MB)
+17/08/29 15:03:35 INFO BlockManagerInfo: Added broadcast_4_piece2 in memory on 10.0.0.10:42430 (size: 3.0 MB, free: 983.7 MB)
+17/08/29 15:03:35 INFO BlockManagerInfo: Added broadcast_3_piece0 in memory on 10.0.0.10:42430 (size: 4.0 KB, free: 983.7 MB)
+17/08/29 15:09:43 INFO TaskSetManager: Finished task 0.0 in stage 3.0 (TID 54) in 372353 ms on 10.0.0.10 (executor 0) (1/1)
+17/08/29 15:09:43 INFO TaskSchedulerImpl: Removed TaskSet 3.0, whose tasks have all completed, from pool 
+17/08/29 15:09:43 INFO DAGScheduler: ShuffleMapStage 3 (mapPartitionsWithIndex at Word2Vec.scala:361) finished in 372.352 s
+17/08/29 15:09:43 INFO DAGScheduler: looking for newly runnable stages
+17/08/29 15:09:43 INFO DAGScheduler: running: Set()
+17/08/29 15:09:43 INFO DAGScheduler: waiting: Set(ResultStage 4)
+17/08/29 15:09:43 INFO DAGScheduler: failed: Set()
+17/08/29 15:09:43 INFO DAGScheduler: Submitting ResultStage 4 (ShuffledRDD[14] at reduceByKey at Word2Vec.scala:435), which has no missing parents
+17/08/29 15:09:43 INFO MemoryStore: Block broadcast_10 stored as values in memory (estimated size 4.4 KB, free 41.5 MB)
+17/08/29 15:09:43 INFO MemoryStore: Block broadcast_10_piece0 stored as bytes in memory (estimated size 2.4 KB, free 41.5 MB)
+17/08/29 15:09:43 INFO BlockManagerInfo: Added broadcast_10_piece0 in memory on 10.0.0.15:33205 (size: 2.4 KB, free: 280.4 MB)
+17/08/29 15:09:43 INFO SparkContext: Created broadcast 10 from broadcast at DAGScheduler.scala:1006
+17/08/29 15:09:43 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 4 (ShuffledRDD[14] at reduceByKey at Word2Vec.scala:435) (first 15 tasks are for partitions Vector(0))
+17/08/29 15:09:43 INFO TaskSchedulerImpl: Adding task set 4.0 with 1 tasks
+17/08/29 15:09:43 INFO TaskSetManager: Starting task 0.0 in stage 4.0 (TID 55, 10.0.0.10, executor 0, partition 0, NODE_LOCAL, 4625 bytes)
+17/08/29 15:09:43 INFO BlockManagerInfo: Added broadcast_10_piece0 in memory on 10.0.0.10:42430 (size: 2.4 KB, free: 983.7 MB)
+17/08/29 15:09:43 INFO MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 2 to 10.0.0.10:52624
+17/08/29 15:09:43 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 2 is 137 bytes
+17/08/29 15:09:45 INFO BlockManagerInfo: Added taskresult_55 in memory on 10.0.0.10:42430 (size: 145.5 MB, free: 838.2 MB)
+17/08/29 15:09:46 INFO BlockManagerInfo: Removed broadcast_8_piece0 on 10.0.0.15:33205 in memory (size: 3.3 KB, free: 280.4 MB)
+17/08/29 15:09:46 INFO BlockManagerInfo: Removed broadcast_8_piece0 on 10.0.0.10:42430 in memory (size: 3.3 KB, free: 838.2 MB)
+17/08/29 15:09:46 INFO BlockManagerInfo: Removed broadcast_9_piece0 on 10.0.0.15:33205 in memory (size: 3.5 KB, free: 280.4 MB)
+17/08/29 15:09:46 INFO BlockManagerInfo: Removed broadcast_9_piece0 on 10.0.0.10:42430 in memory (size: 3.5 KB, free: 838.3 MB)
+17/08/29 15:21:08 ERROR TransportRequestHandler: Error sending result RpcResponse{requestId=9063631869570877088, body=NioManagedBuffer{buf=java.nio.HeapByteBuffer[pos=0 lim=81 cap=156]}} to /10.0.0.10:52624; closing connection
+java.io.IOException: Broken pipe
+	at sun.nio.ch.FileDispatcherImpl.write0(Native Method)
+	at sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:47)
+	at sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:93)
+	at sun.nio.ch.IOUtil.write(IOUtil.java:65)
+	at sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:471)
+	at org.apache.spark.network.protocol.MessageWithHeader.copyByteBuf(MessageWithHeader.java:142)
+	at org.apache.spark.network.protocol.MessageWithHeader.transferTo(MessageWithHeader.java:123)
+	at io.netty.channel.socket.nio.NioSocketChannel.doWriteFileRegion(NioSocketChannel.java:287)
+	at io.netty.channel.nio.AbstractNioByteChannel.doWrite(AbstractNioByteChannel.java:237)
+	at io.netty.channel.socket.nio.NioSocketChannel.doWrite(NioSocketChannel.java:314)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.flush0(AbstractChannel.java:802)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.flush0(AbstractNioChannel.java:313)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.flush(AbstractChannel.java:770)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.flush(DefaultChannelPipeline.java:1256)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeFlush0(AbstractChannelHandlerContext.java:771)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeFlush(AbstractChannelHandlerContext.java:763)
+	at io.netty.channel.AbstractChannelHandlerContext.flush(AbstractChannelHandlerContext.java:744)
+	at io.netty.channel.ChannelOutboundHandlerAdapter.flush(ChannelOutboundHandlerAdapter.java:115)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeFlush0(AbstractChannelHandlerContext.java:771)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeFlush(AbstractChannelHandlerContext.java:763)
+	at io.netty.channel.AbstractChannelHandlerContext.flush(AbstractChannelHandlerContext.java:744)
+	at io.netty.channel.ChannelDuplexHandler.flush(ChannelDuplexHandler.java:117)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeFlush0(AbstractChannelHandlerContext.java:771)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeFlush(AbstractChannelHandlerContext.java:763)
+	at io.netty.channel.AbstractChannelHandlerContext.access$1500(AbstractChannelHandlerContext.java:35)
+	at io.netty.channel.AbstractChannelHandlerContext$WriteAndFlushTask.write(AbstractChannelHandlerContext.java:1117)
+	at io.netty.channel.AbstractChannelHandlerContext$AbstractWriteTask.run(AbstractChannelHandlerContext.java:1051)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:399)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:446)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:131)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:144)
+	at java.lang.Thread.run(Thread.java:748)
+17/08/29 15:21:12 INFO SparkContext: Invoking stop() from shutdown hook
+17/08/29 15:23:06 ERROR TransportRequestHandler: Error sending result RpcResponse{requestId=5451575263262604238, body=NioManagedBuffer{buf=java.nio.HeapByteBuffer[pos=0 lim=81 cap=156]}} to /10.0.0.10:52624; closing connection
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(...)(Unknown Source)
+17/08/29 15:23:07 ERROR TransportRequestHandler: Error sending result RpcResponse{requestId=8771286713810853701, body=NioManagedBuffer{buf=java.nio.HeapByteBuffer[pos=0 lim=81 cap=156]}} to /10.0.0.10:52624; closing connection
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(...)(Unknown Source)
+17/08/29 15:23:07 ERROR TransportRequestHandler: Error sending result RpcResponse{requestId=8857073073964923381, body=NioManagedBuffer{buf=java.nio.HeapByteBuffer[pos=0 lim=81 cap=156]}} to /10.0.0.10:52624; closing connection
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(...)(Unknown Source)
+17/08/29 15:23:14 ERROR TransportRequestHandler: Error sending result RpcResponse{requestId=6843964661050854297, body=NioManagedBuffer{buf=java.nio.HeapByteBuffer[pos=0 lim=81 cap=156]}} to /10.0.0.10:52624; closing connection
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(...)(Unknown Source)
+17/08/29 15:23:14 ERROR TransportRequestHandler: Error sending result RpcResponse{requestId=4678463147679286488, body=NioManagedBuffer{buf=java.nio.HeapByteBuffer[pos=0 lim=81 cap=156]}} to /10.0.0.10:52624; closing connection
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(...)(Unknown Source)
+17/08/29 15:23:16 WARN HeartbeatReceiver: Removing executor 0 with no recent heartbeats: 122396 ms exceeds timeout 120000 ms
+17/08/29 15:23:40 ERROR TransportRequestHandler: Error sending result RpcResponse{requestId=7347211433555574926, body=NioManagedBuffer{buf=java.nio.HeapByteBuffer[pos=0 lim=81 cap=156]}} to /10.0.0.10:52624; closing connection
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(...)(Unknown Source)
+17/08/29 15:23:44 ERROR TransportRequestHandler: Error sending result RpcResponse{requestId=5432193602718589730, body=NioManagedBuffer{buf=java.nio.HeapByteBuffer[pos=0 lim=81 cap=156]}} to /10.0.0.10:52624; closing connection
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(...)(Unknown Source)
+17/08/29 15:23:45 ERROR TransportRequestHandler: Error sending result RpcResponse{requestId=4882209246888644556, body=NioManagedBuffer{buf=java.nio.HeapByteBuffer[pos=0 lim=81 cap=156]}} to /10.0.0.10:52624; closing connection
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(...)(Unknown Source)
+17/08/29 15:23:52 ERROR TaskSchedulerImpl: Lost executor 0 on 10.0.0.10: Executor heartbeat timed out after 122396 ms
+17/08/29 15:23:56 ERROR TransportRequestHandler: Error sending result RpcResponse{requestId=8116162780631422546, body=NioManagedBuffer{buf=java.nio.HeapByteBuffer[pos=0 lim=81 cap=156]}} to /10.0.0.10:52624; closing connection
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(...)(Unknown Source)
+17/08/29 15:25:07 INFO AbstractConnector: Stopped Spark@352c308{HTTP/1.1,[http/1.1]}{0.0.0.0:4040}
+17/08/29 15:26:23 INFO SparkUI: Stopped Spark web UI at http://10.0.0.15:4040
+17/08/29 15:27:08 WARN TaskSetManager: Lost task 0.0 in stage 4.0 (TID 55, 10.0.0.10, executor 0): ExecutorLostFailure (executor 0 exited caused by one of the running tasks) Reason: Executor heartbeat timed out after 122396 ms
+17/08/29 15:28:23 INFO DAGScheduler: Executor lost: 0 (epoch 3)
+17/08/29 15:28:50 WARN NettyRpcEnv: Ignored message: true
+17/08/29 15:29:00 INFO StandaloneSchedulerBackend: Requesting to kill executor(s) 0
+17/08/29 15:29:08 INFO BlockManagerMasterEndpoint: Trying to remove executor 0 from BlockManagerMaster.
+17/08/29 15:29:43 ERROR TransportRequestHandler: Error sending result RpcResponse{requestId=7625877752049064311, body=NioManagedBuffer{buf=java.nio.HeapByteBuffer[pos=0 lim=81 cap=156]}} to /10.0.0.10:52624; closing connection
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(...)(Unknown Source)
+17/08/29 15:30:00 WARN BlockManagerMasterEndpoint: No more replicas available for rdd_12_0 !
+17/08/29 15:30:06 WARN BlockManagerMasterEndpoint: No more replicas available for taskresult_55 !
+17/08/29 15:30:33 ERROR LiveListenerBus: SparkListenerBus has already stopped! Dropping event SparkListenerBlockManagerRemoved(1503995410925,BlockManagerId(0, 10.0.0.10, 42430, None))
+17/08/29 15:30:39 INFO BlockManagerMasterEndpoint: Removing block manager BlockManagerId(0, 10.0.0.10, 42430, None)
+17/08/29 15:30:39 WARN NettyRpcEnv: Ignored message: true
+17/08/29 15:30:39 INFO StandaloneAppClient$ClientEndpoint: Executor updated: app-20170829150211-0144/0 is now EXITED (Command exited with code 56)
+17/08/29 15:31:03 INFO StandaloneSchedulerBackend: Executor app-20170829150211-0144/0 removed: Command exited with code 56
+17/08/29 15:31:05 INFO StandaloneAppClient$ClientEndpoint: Executor added: app-20170829150211-0144/1 on worker-20170822112324-10.0.0.10-45253 (10.0.0.10:45253) with 2 cores
+17/08/29 15:31:09 ERROR DAGSchedulerEventProcessLoop: DAGSchedulerEventProcessLoop failed; shutting down SparkContext
+org.apache.spark.rpc.RpcTimeoutException: Futures timed out after [120 seconds]. This timeout is controlled by spark.rpc.askTimeout
+	at org.apache.spark.rpc.RpcTimeout.org$apache$spark$rpc$RpcTimeout$$createRpcTimeoutException(RpcTimeout.scala:47)
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$addMessageIfTimeout$1.applyOrElse(RpcTimeout.scala:62)
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$addMessageIfTimeout$1.applyOrElse(RpcTimeout.scala:58)
+	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:36)
+	at org.apache.spark.rpc.RpcTimeout.awaitResult(RpcTimeout.scala:76)
+	at org.apache.spark.rpc.RpcEndpointRef.askSync(RpcEndpointRef.scala:92)
+	at org.apache.spark.rpc.RpcEndpointRef.askSync(RpcEndpointRef.scala:76)
+	at org.apache.spark.storage.BlockManagerMaster.tell(BlockManagerMaster.scala:241)
+	at org.apache.spark.storage.BlockManagerMaster.removeExecutor(BlockManagerMaster.scala:41)
+	at org.apache.spark.scheduler.DAGScheduler.handleExecutorLost(DAGScheduler.scala:1386)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.doOnReceive(DAGScheduler.scala:1702)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:1669)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:1658)
+	at org.apache.spark.util.EventLoop$$anon$1.run(EventLoop.scala:48)
+Caused by: java.util.concurrent.TimeoutException: Futures timed out after [120 seconds]
+	at scala.concurrent.impl.Promise$DefaultPromise.ready(Promise.scala:219)
+	at scala.concurrent.impl.Promise$DefaultPromise.result(Promise.scala:223)
+	at org.apache.spark.util.ThreadUtils$.awaitResult(ThreadUtils.scala:201)
+	at org.apache.spark.rpc.RpcTimeout.awaitResult(RpcTimeout.scala:75)
+	... 9 more
+17/08/29 15:31:12 INFO StandaloneSchedulerBackend: Granted executor ID app-20170829150211-0144/1 on hostPort 10.0.0.10:45253 with 2 cores, 2.7 GB RAM
+17/08/29 15:31:32 INFO StandaloneAppClient$ClientEndpoint: Executor updated: app-20170829150211-0144/1 is now RUNNING
+17/08/29 15:31:42 ERROR StandaloneSchedulerBackend: Application has been killed. Reason: Master removed our application: KILLED
+17/08/29 15:32:29 INFO TaskSetManager: Starting task 0.1 in stage 4.0 (TID 56, 10.0.0.10, executor 0, partition 0, NODE_LOCAL, 4625 bytes)
+17/08/29 15:32:39 INFO TaskSchedulerImpl: Cancelling stage 4
+17/08/29 15:33:25 INFO TaskSchedulerImpl: Stage 4 was cancelled
+17/08/29 15:33:37 ERROR StandaloneSchedulerBackend: Cannot receive any reply from 10.0.0.15:43371 in 120 seconds. This timeout is controlled by spark.rpc.askTimeout
+org.apache.spark.rpc.RpcTimeoutException: Cannot receive any reply from 10.0.0.15:43371 in 120 seconds. This timeout is controlled by spark.rpc.askTimeout
+	at org.apache.spark.rpc.RpcTimeout.org$apache$spark$rpc$RpcTimeout$$createRpcTimeoutException(RpcTimeout.scala:47)
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$addMessageIfTimeout$1.applyOrElse(RpcTimeout.scala:62)
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$addMessageIfTimeout$1.applyOrElse(RpcTimeout.scala:58)
+	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:36)
+	at scala.util.Failure$$anonfun$recover$1.apply(Try.scala:216)
+	at scala.util.Try$.apply(Try.scala:192)
+	at scala.util.Failure.recover(Try.scala:216)
+	at scala.concurrent.Future$$anonfun$recover$1.apply(Future.scala:326)
+	at scala.concurrent.Future$$anonfun$recover$1.apply(Future.scala:326)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32)
+	at org.spark_project.guava.util.concurrent.MoreExecutors$SameThreadExecutorService.execute(MoreExecutors.java:293)
+	at scala.concurrent.impl.ExecutionContextImpl$$anon$1.execute(ExecutionContextImpl.scala:136)
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248)
+	at scala.concurrent.Promise$class.complete(Promise.scala:55)
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153)
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:237)
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:237)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32)
+	at scala.concurrent.BatchingExecutor$Batch$$anonfun$run$1.processBatch$1(BatchingExecutor.scala:63)
+	at scala.concurrent.BatchingExecutor$Batch$$anonfun$run$1.apply$mcV$sp(BatchingExecutor.scala:78)
+	at scala.concurrent.BatchingExecutor$Batch$$anonfun$run$1.apply(BatchingExecutor.scala:55)
+	at scala.concurrent.BatchingExecutor$Batch$$anonfun$run$1.apply(BatchingExecutor.scala:55)
+	at scala.concurrent.BlockContext$.withBlockContext(BlockContext.scala:72)
+	at scala.concurrent.BatchingExecutor$Batch.run(BatchingExecutor.scala:54)
+	at scala.concurrent.Future$InternalCallbackExecutor$.unbatchedExecute(Future.scala:601)
+	at scala.concurrent.BatchingExecutor$class.execute(BatchingExecutor.scala:106)
+	at scala.concurrent.Future$InternalCallbackExecutor$.execute(Future.scala:599)
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248)
+	at scala.concurrent.Promise$class.tryFailure(Promise.scala:112)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryFailure(Promise.scala:153)
+	at org.apache.spark.rpc.netty.NettyRpcEnv.org$apache$spark$rpc$netty$NettyRpcEnv$$onFailure$1(NettyRpcEnv.scala:205)
+	at org.apache.spark.rpc.netty.NettyRpcEnv$$anon$1.run(NettyRpcEnv.scala:239)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.util.concurrent.TimeoutException: Cannot receive any reply from 10.0.0.15:43371 in 120 seconds
+	... 8 more
+17/08/29 15:34:00 INFO StandaloneSchedulerBackend: Actual list of executor(s) to be killed is 0
+17/08/29 15:33:40 INFO DAGScheduler: ResultStage 4 (collect at Word2Vec.scala:438) failed in 1422.428 s due to Job 1 cancelled as part of cancellation of all jobs
+17/08/29 15:34:10 INFO SparkContext: SparkContext already stopped.
+17/08/29 15:34:06 ERROR LiveListenerBus: SparkListenerBus has already stopped! Dropping event SparkListenerExecutorMetricsUpdate(0,WrappedArray())
+17/08/29 15:34:12 ERROR LiveListenerBus: SparkListenerBus has already stopped! Dropping event SparkListenerStageCompleted(org.apache.spark.scheduler.StageInfo@32d8232)
+17/08/29 15:34:38 INFO DAGScheduler: Job 1 failed: collect at Word2Vec.scala:438, took 1884.477797 s
+17/08/29 15:34:44 ERROR LiveListenerBus: SparkListenerBus has already stopped! Dropping event SparkListenerJobEnd(1,1503995663243,JobFailed(org.apache.spark.SparkException: Job 1 cancelled as part of cancellation of all jobs))
+17/08/29 15:35:03 ERROR TransportRequestHandler: Error sending result RpcResponse{requestId=8542690668897778662, body=NioManagedBuffer{buf=java.nio.HeapByteBuffer[pos=0 lim=47 cap=64]}} to /10.0.0.10:52708; closing connection
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(...)(Unknown Source)
+17/08/29 15:35:07 INFO TorrentBroadcast: Destroying Broadcast(3) (from destroy at Word2Vec.scala:321)
+17/08/29 15:35:08 ERROR Utils: Uncaught exception in thread kill-executor-thread
+org.apache.spark.SparkException: Exception thrown in awaitResult: 
+	at org.apache.spark.util.ThreadUtils$.awaitResult(ThreadUtils.scala:205)
+	at org.apache.spark.rpc.RpcTimeout.awaitResult(RpcTimeout.scala:75)
+	at org.apache.spark.scheduler.cluster.CoarseGrainedSchedulerBackend.killExecutors(CoarseGrainedSchedulerBackend.scala:637)
+	at org.apache.spark.SparkContext.killAndReplaceExecutor(SparkContext.scala:1687)
+	at org.apache.spark.HeartbeatReceiver$$anonfun$org$apache$spark$HeartbeatReceiver$$expireDeadHosts$3$$anon$3$$anonfun$run$3.apply$mcV$sp(HeartbeatReceiver.scala:207)
+	at org.apache.spark.util.Utils$.tryLogNonFatalError(Utils.scala:1317)
+	at org.apache.spark.HeartbeatReceiver$$anonfun$org$apache$spark$HeartbeatReceiver$$expireDeadHosts$3$$anon$3.run(HeartbeatReceiver.scala:204)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.apache.spark.SparkException: Could not find AppClient.
+	at org.apache.spark.rpc.netty.Dispatcher.postMessage(Dispatcher.scala:154)
+	at org.apache.spark.rpc.netty.Dispatcher.postLocalMessage(Dispatcher.scala:129)
+	at org.apache.spark.rpc.netty.NettyRpcEnv.ask(NettyRpcEnv.scala:225)
+	at org.apache.spark.rpc.netty.NettyRpcEndpointRef.ask(NettyRpcEnv.scala:512)
+	at org.apache.spark.rpc.RpcEndpointRef.ask(RpcEndpointRef.scala:63)
+	at org.apache.spark.deploy.client.StandaloneAppClient.killExecutors(StandaloneAppClient.scala:309)
+	at org.apache.spark.scheduler.cluster.StandaloneSchedulerBackend.doKillExecutors(StandaloneSchedulerBackend.scala:201)
+	at org.apache.spark.scheduler.cluster.CoarseGrainedSchedulerBackend$$anonfun$13.apply(CoarseGrainedSchedulerBackend.scala:625)
+	at org.apache.spark.scheduler.cluster.CoarseGrainedSchedulerBackend$$anonfun$13.apply(CoarseGrainedSchedulerBackend.scala:625)
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:253)
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:251)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32)
+	at org.spark_project.guava.util.concurrent.MoreExecutors$SameThreadExecutorService.execute(MoreExecutors.java:293)
+	at scala.concurrent.impl.ExecutionContextImpl$$anon$1.execute(ExecutionContextImpl.scala:136)
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40)
+	at scala.concurrent.impl.Promise$KeptPromise.onComplete(Promise.scala:333)
+	at scala.concurrent.Future$class.flatMap(Future.scala:251)
+	at scala.concurrent.impl.Promise$KeptPromise.flatMap(Promise.scala:322)
+	at org.apache.spark.scheduler.cluster.CoarseGrainedSchedulerBackend.killExecutors(CoarseGrainedSchedulerBackend.scala:630)
+	... 9 more
+17/08/29 15:35:37 ERROR TransportRequestHandler: Error sending result RpcResponse{requestId=6891016633275623563, body=NioManagedBuffer{buf=java.nio.HeapByteBuffer[pos=0 lim=81 cap=156]}} to /10.0.0.10:52624; closing connection
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(...)(Unknown Source)
+17/08/29 15:35:26 ERROR LiveListenerBus: SparkListenerBus has already stopped! Dropping event SparkListenerExecutorMetricsUpdate(0,WrappedArray())
+17/08/29 15:35:42 INFO TorrentBroadcast: Destroying Broadcast(4) (from destroy at Word2Vec.scala:322)
+17/08/29 15:35:53 INFO BlockManagerInfo: Removed broadcast_3_piece0 on 10.0.0.15:33205 in memory (size: 4.0 KB, free: 280.4 MB)
+17/08/29 15:35:57 INFO SparkContext: SparkContext already stopped.
+17/08/29 15:36:04 ERROR LiveListenerBus: SparkListenerBus has already stopped! Dropping event SparkListenerExecutorMetricsUpdate(0,WrappedArray())
+17/08/29 15:36:04 ERROR LiveListenerBus: SparkListenerBus has already stopped! Dropping event SparkListenerBlockUpdated(BlockUpdatedInfo(BlockManagerId(driver, 10.0.0.15, 33205, None),broadcast_3_piece0,StorageLevel(1 replicas),0,0))
+17/08/29 15:36:12 ERROR TransportRequestHandler: Error sending result RpcResponse{requestId=5889242795505471576, body=NioManagedBuffer{buf=java.nio.HeapByteBuffer[pos=0 lim=81 cap=156]}} to /10.0.0.10:52624; closing connection
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(...)(Unknown Source)
+17/08/29 15:36:18 INFO StandaloneSchedulerBackend: Shutting down all executors
+17/08/29 15:36:36 ERROR LiveListenerBus: SparkListenerBus has already stopped! Dropping event SparkListenerExecutorMetricsUpdate(0,WrappedArray())
+17/08/29 15:36:40 ERROR TransportRequestHandler: Error sending result RpcResponse{requestId=5866382082804507413, body=NioManagedBuffer{buf=java.nio.HeapByteBuffer[pos=0 lim=81 cap=156]}} to /10.0.0.10:52624; closing connection
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(...)(Unknown Source)
+17/08/29 15:36:40 INFO TorrentBroadcast: Destroying Broadcast(5) (from destroy at Word2Vec.scala:323)
+17/08/29 15:36:49 ERROR TransportRequestHandler: Error sending result RpcResponse{requestId=8081754512329551182, body=NioManagedBuffer{buf=java.nio.HeapByteBuffer[pos=0 lim=81 cap=156]}} to /10.0.0.10:52624; closing connection
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(...)(Unknown Source)
+17/08/29 15:36:50 ERROR LiveListenerBus: SparkListenerBus has already stopped! Dropping event SparkListenerExecutorMetricsUpdate(0,WrappedArray())
+17/08/29 15:36:51 INFO BlockManagerInfo: Removed broadcast_4_piece0 on 10.0.0.15:33205 in memory (size: 4.0 MB, free: 284.4 MB)
+17/08/29 15:37:01 ERROR LiveListenerBus: SparkListenerBus has already stopped! Dropping event SparkListenerBlockUpdated(BlockUpdatedInfo(BlockManagerId(driver, 10.0.0.15, 33205, None),broadcast_4_piece0,StorageLevel(1 replicas),0,0))
+17/08/29 15:37:11 ERROR TransportRequestHandler: Error sending result RpcResponse{requestId=5431202244032504959, body=NioManagedBuffer{buf=java.nio.HeapByteBuffer[pos=0 lim=81 cap=156]}} to /10.0.0.10:52624; closing connection
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(...)(Unknown Source)
+17/08/29 15:37:11 INFO BlockManagerInfo: Removed broadcast_4_piece2 on 10.0.0.15:33205 in memory (size: 3.0 MB, free: 287.5 MB)
+17/08/29 15:37:11 ERROR LiveListenerBus: SparkListenerBus has already stopped! Dropping event SparkListenerBlockUpdated(BlockUpdatedInfo(BlockManagerId(driver, 10.0.0.15, 33205, None),broadcast_4_piece2,StorageLevel(1 replicas),0,0))
+17/08/29 15:37:11 INFO BlockManagerInfo: Removed broadcast_5_piece1 on 10.0.0.15:33205 in memory (size: 2.2 MB, free: 289.7 MB)
+17/08/29 15:37:11 ERROR LiveListenerBus: SparkListenerBus has already stopped! Dropping event SparkListenerBlockUpdated(BlockUpdatedInfo(BlockManagerId(driver, 10.0.0.15, 33205, None),broadcast_5_piece1,StorageLevel(1 replicas),0,0))
+Exception in thread "main" org.apache.spark.SparkException: Job 1 cancelled as part of cancellation of all jobs
+	at org.apache.spark.scheduler.DAGScheduler.org$apache$spark$scheduler$DAGScheduler$$failJobAndIndependentStages(DAGScheduler.scala:1499)
+	at org.apache.spark.scheduler.DAGScheduler.handleJobCancellation(DAGScheduler.scala:1439)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$doCancelAllJobs$1.apply$mcVI$sp(DAGScheduler.scala:723)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$doCancelAllJobs$1.apply(DAGScheduler.scala:723)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$doCancelAllJobs$1.apply(DAGScheduler.scala:723)
+	at scala.collection.mutable.HashSet.foreach(HashSet.scala:78)
+	at org.apache.spark.scheduler.DAGScheduler.doCancelAllJobs(DAGScheduler.scala:723)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onError(DAGScheduler.scala:1723)
+	at org.apache.spark.util.EventLoop$$anon$1.run(EventLoop.scala:52)
+	at org.apache.spark.scheduler.DAGScheduler.runJob(DAGScheduler.scala:630)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2022)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2043)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2062)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2087)
+	at org.apache.spark.rdd.RDD$$anonfun$collect$1.apply(RDD.scala:936)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:112)
+	at org.apache.spark.rdd.RDD.withScope(RDD.scala:362)
+	at org.apache.spark.rdd.RDD.collect(RDD.scala:935)
+	at org.apache.spark.mllib.feature.Word2Vec$$anonfun$doFit$1.apply$mcVI$sp(Word2Vec.scala:438)
+	at scala.collection.immutable.Range.foreach$mVc$sp(Range.scala:160)
+	at org.apache.spark.mllib.feature.Word2Vec.doFit(Word2Vec.scala:358)
+	at org.apache.spark.mllib.feature.Word2Vec.fit(Word2Vec.scala:319)
+	at W2V$.main(W2V.scala:13)
+	at W2V.main(W2V.scala)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.spark.deploy.SparkSubmit$.org$apache$spark$deploy$SparkSubmit$$runMain(SparkSubmit.scala:755)
+	at org.apache.spark.deploy.SparkSubmit$.doRunMain$1(SparkSubmit.scala:180)
+	at org.apache.spark.deploy.SparkSubmit$.submit(SparkSubmit.scala:205)
+	at org.apache.spark.deploy.SparkSubmit$.main(SparkSubmit.scala:119)
+	at org.apache.spark.deploy.SparkSubmit.main(SparkSubmit.scala)
+17/08/29 15:37:11 ERROR LiveListenerBus: SparkListenerBus has already stopped! Dropping event SparkListenerExecutorMetricsUpdate(0,WrappedArray())
+17/08/29 15:37:11 ERROR TaskSchedulerImpl: Lost executor 0 on 10.0.0.10: Remote RPC client disassociated. Likely due to containers exceeding thresholds, or network issues. Check driver logs for WARN messages.
+17/08/29 15:37:11 WARN TaskSetManager: Lost task 0.1 in stage 4.0 (TID 56, 10.0.0.10, executor 0): ExecutorLostFailure (executor 0 exited caused by one of the running tasks) Reason: Remote RPC client disassociated. Likely due to containers exceeding thresholds, or network issues. Check driver logs for WARN messages.
+17/08/29 15:37:11 INFO TaskSchedulerImpl: Removed TaskSet 4.0, whose tasks have all completed, from pool 
+17/08/29 15:37:11 INFO BlockManagerInfo: Removed broadcast_4_piece1 on 10.0.0.15:33205 in memory (size: 4.0 MB, free: 293.7 MB)
+17/08/29 15:37:11 ERROR LiveListenerBus: SparkListenerBus has already stopped! Dropping event SparkListenerExecutorRemoved(1503995831914,0,Remote RPC client disassociated. Likely due to containers exceeding thresholds, or network issues. Check driver logs for WARN messages.)
+17/08/29 15:37:11 ERROR LiveListenerBus: SparkListenerBus has already stopped! Dropping event SparkListenerBlockUpdated(BlockUpdatedInfo(BlockManagerId(driver, 10.0.0.15, 33205, None),broadcast_4_piece1,StorageLevel(1 replicas),0,0))
+17/08/29 15:37:11 ERROR TransportRequestHandler: Error sending result RpcResponse{requestId=8316180678581876605, body=NioManagedBuffer{buf=java.nio.HeapByteBuffer[pos=0 lim=81 cap=156]}} to /10.0.0.10:52624; closing connection
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(...)(Unknown Source)
+17/08/29 15:37:11 ERROR LiveListenerBus: SparkListenerBus has already stopped! Dropping event SparkListenerExecutorMetricsUpdate(0,WrappedArray())
+17/08/29 15:37:11 ERROR LiveListenerBus: SparkListenerBus has already stopped! Dropping event SparkListenerExecutorMetricsUpdate(0,WrappedArray())
+17/08/29 15:37:11 ERROR TransportRequestHandler: Error sending result RpcResponse{requestId=4734813350225406252, body=NioManagedBuffer{buf=java.nio.HeapByteBuffer[pos=0 lim=81 cap=156]}} to /10.0.0.10:52624; closing connection
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(...)(Unknown Source)
+17/08/29 15:37:11 ERROR TransportRequestHandler: Error sending result RpcResponse{requestId=5469626445312138022, body=NioManagedBuffer{buf=java.nio.HeapByteBuffer[pos=0 lim=81 cap=156]}} to /10.0.0.10:52624; closing connection
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(...)(Unknown Source)
+17/08/29 15:37:11 INFO BlockManagerInfo: Removed broadcast_5_piece0 on 10.0.0.15:33205 in memory (size: 4.0 MB, free: 297.7 MB)
+17/08/29 15:37:11 ERROR LiveListenerBus: SparkListenerBus has already stopped! Dropping event SparkListenerBlockUpdated(BlockUpdatedInfo(BlockManagerId(driver, 10.0.0.15, 33205, None),broadcast_5_piece0,StorageLevel(1 replicas),0,0))
+17/08/29 15:37:11 INFO BlockManagerMasterEndpoint: Trying to remove executor 0 from BlockManagerMaster.
+17/08/29 15:37:11 INFO BlockManagerMaster: Removal of executor 0 requested
+17/08/29 15:37:11 ERROR LiveListenerBus: SparkListenerBus has already stopped! Dropping event SparkListenerExecutorMetricsUpdate(0,WrappedArray())
+17/08/29 15:37:11 ERROR LiveListenerBus: SparkListenerBus has already stopped! Dropping event SparkListenerExecutorMetricsUpdate(0,WrappedArray())
+17/08/29 15:37:11 ERROR TransportRequestHandler: Error sending result RpcResponse{requestId=7279353864373665430, body=NioManagedBuffer{buf=java.nio.HeapByteBuffer[pos=0 lim=81 cap=156]}} to /10.0.0.10:52624; closing connection
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(...)(Unknown Source)
+17/08/29 15:37:11 ERROR LiveListenerBus: SparkListenerBus has already stopped! Dropping event SparkListenerExecutorMetricsUpdate(0,WrappedArray())
+17/08/29 15:37:11 ERROR TransportRequestHandler: Error sending result RpcResponse{requestId=7404283694247143547, body=NioManagedBuffer{buf=java.nio.HeapByteBuffer[pos=0 lim=81 cap=156]}} to /10.0.0.10:52624; closing connection
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(...)(Unknown Source)
+17/08/29 15:37:11 ERROR TransportRequestHandler: Error sending result RpcResponse{requestId=8127591695858163462, body=NioManagedBuffer{buf=java.nio.HeapByteBuffer[pos=0 lim=81 cap=156]}} to /10.0.0.10:52624; closing connection
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(...)(Unknown Source)
+17/08/29 15:37:11 ERROR LiveListenerBus: SparkListenerBus has already stopped! Dropping event SparkListenerExecutorMetricsUpdate(0,WrappedArray())
+17/08/29 15:37:11 ERROR LiveListenerBus: SparkListenerBus has already stopped! Dropping event SparkListenerExecutorMetricsUpdate(0,WrappedArray())
+17/08/29 15:37:11 ERROR TransportRequestHandler: Error sending result RpcResponse{requestId=6938125442086307619, body=NioManagedBuffer{buf=java.nio.HeapByteBuffer[pos=0 lim=81 cap=156]}} to /10.0.0.10:52624; closing connection
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(...)(Unknown Source)
+17/08/29 15:37:11 ERROR LiveListenerBus: SparkListenerBus has already stopped! Dropping event SparkListenerExecutorMetricsUpdate(0,WrappedArray())
+17/08/29 15:37:11 ERROR TransportRequestHandler: Error sending result RpcResponse{requestId=6090570278770103074, body=NioManagedBuffer{buf=java.nio.HeapByteBuffer[pos=0 lim=81 cap=156]}} to /10.0.0.10:52624; closing connection
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(...)(Unknown Source)
+17/08/29 15:37:11 ERROR TransportRequestHandler: Error sending result RpcResponse{requestId=5500871014588390964, body=NioManagedBuffer{buf=java.nio.HeapByteBuffer[pos=0 lim=81 cap=156]}} to /10.0.0.10:52624; closing connection
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(...)(Unknown Source)
+17/08/29 15:37:11 ERROR LiveListenerBus: SparkListenerBus has already stopped! Dropping event SparkListenerExecutorMetricsUpdate(0,WrappedArray())
+17/08/29 15:37:11 ERROR LiveListenerBus: SparkListenerBus has already stopped! Dropping event SparkListenerExecutorMetricsUpdate(0,WrappedArray())
+17/08/29 15:37:11 ERROR TransportRequestHandler: Error sending result RpcResponse{requestId=4792100351982569125, body=NioManagedBuffer{buf=java.nio.HeapByteBuffer[pos=0 lim=81 cap=156]}} to /10.0.0.10:52624; closing connection
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(...)(Unknown Source)
+17/08/29 15:37:11 ERROR LiveListenerBus: SparkListenerBus has already stopped! Dropping event SparkListenerExecutorMetricsUpdate(0,WrappedArray())
+17/08/29 15:37:11 ERROR TransportRequestHandler: Error sending result RpcResponse{requestId=8336082766623378862, body=NioManagedBuffer{buf=java.nio.HeapByteBuffer[pos=0 lim=81 cap=156]}} to /10.0.0.10:52624; closing connection
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(...)(Unknown Source)
+17/08/29 15:37:11 ERROR TransportRequestHandler: Error sending result RpcResponse{requestId=5527384082313204199, body=NioManagedBuffer{buf=java.nio.HeapByteBuffer[pos=0 lim=81 cap=156]}} to /10.0.0.10:52624; closing connection
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(...)(Unknown Source)
+17/08/29 15:37:11 INFO CoarseGrainedSchedulerBackend$DriverEndpoint: Asked to remove non-existent executor 0
+17/08/29 15:37:11 WARN NettyRpcEnv: Ignored message: true
+17/08/29 15:37:11 WARN CoarseGrainedSchedulerBackend$DriverEndpoint: Attempted to kill task 56 for unknown executor 0.
+17/08/29 15:37:11 INFO CoarseGrainedSchedulerBackend$DriverEndpoint: Asking each executor to shut down
+17/08/29 15:37:11 ERROR Utils: Uncaught exception in thread Thread-2
+org.apache.spark.SparkException: Exception thrown in awaitResult: 
+	at org.apache.spark.util.ThreadUtils$.awaitResult(ThreadUtils.scala:205)
+	at org.apache.spark.rpc.RpcTimeout.awaitResult(RpcTimeout.scala:75)
+	at org.apache.spark.deploy.client.StandaloneAppClient.stop(StandaloneAppClient.scala:279)
+	at org.apache.spark.scheduler.cluster.StandaloneSchedulerBackend.org$apache$spark$scheduler$cluster$StandaloneSchedulerBackend$$stop(StandaloneSchedulerBackend.scala:220)
+	at org.apache.spark.scheduler.cluster.StandaloneSchedulerBackend.stop(StandaloneSchedulerBackend.scala:123)
+	at org.apache.spark.scheduler.TaskSchedulerImpl.stop(TaskSchedulerImpl.scala:517)
+	at org.apache.spark.scheduler.DAGScheduler.stop(DAGScheduler.scala:1652)
+	at org.apache.spark.SparkContext$$anonfun$stop$8.apply$mcV$sp(SparkContext.scala:1921)
+	at org.apache.spark.util.Utils$.tryLogNonFatalError(Utils.scala:1317)
+	at org.apache.spark.SparkContext.stop(SparkContext.scala:1920)
+	at org.apache.spark.SparkContext$$anonfun$2.apply$mcV$sp(SparkContext.scala:581)
+	at org.apache.spark.util.SparkShutdownHook.run(ShutdownHookManager.scala:216)
+	at org.apache.spark.util.SparkShutdownHookManager$$anonfun$runAll$1$$anonfun$apply$mcV$sp$1.apply$mcV$sp(ShutdownHookManager.scala:188)
+	at org.apache.spark.util.SparkShutdownHookManager$$anonfun$runAll$1$$anonfun$apply$mcV$sp$1.apply(ShutdownHookManager.scala:188)
+	at org.apache.spark.util.SparkShutdownHookManager$$anonfun$runAll$1$$anonfun$apply$mcV$sp$1.apply(ShutdownHookManager.scala:188)
+	at org.apache.spark.util.Utils$.logUncaughtExceptions(Utils.scala:1954)
+	at org.apache.spark.util.SparkShutdownHookManager$$anonfun$runAll$1.apply$mcV$sp(ShutdownHookManager.scala:188)
+	at org.apache.spark.util.SparkShutdownHookManager$$anonfun$runAll$1.apply(ShutdownHookManager.scala:188)
+	at org.apache.spark.util.SparkShutdownHookManager$$anonfun$runAll$1.apply(ShutdownHookManager.scala:188)
+	at scala.util.Try$.apply(Try.scala:192)
+	at org.apache.spark.util.SparkShutdownHookManager.runAll(ShutdownHookManager.scala:188)
+	at org.apache.spark.util.SparkShutdownHookManager$$anon$2.run(ShutdownHookManager.scala:178)
+	at org.apache.hadoop.util.ShutdownHookManager$1.run(ShutdownHookManager.java:54)
+Caused by: org.apache.spark.SparkException: Could not find AppClient.
+	at org.apache.spark.rpc.netty.Dispatcher.postMessage(Dispatcher.scala:154)
+	at org.apache.spark.rpc.netty.Dispatcher.postLocalMessage(Dispatcher.scala:129)
+	at org.apache.spark.rpc.netty.NettyRpcEnv.ask(NettyRpcEnv.scala:225)
+	at org.apache.spark.rpc.netty.NettyRpcEndpointRef.ask(NettyRpcEnv.scala:512)
+	at org.apache.spark.rpc.RpcEndpointRef.ask(RpcEndpointRef.scala:63)
+	... 21 more
+17/08/29 15:37:11 INFO MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+17/08/29 15:37:12 INFO MemoryStore: MemoryStore cleared
+17/08/29 15:37:12 INFO BlockManager: BlockManager stopped
+17/08/29 15:37:12 INFO BlockManagerMaster: BlockManagerMaster stopped
+17/08/29 15:37:12 INFO OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+17/08/29 15:37:12 ERROR TaskResultGetter: Exception while getting task result
+java.lang.NullPointerException
+	at org.apache.spark.storage.BlockManagerMaster.removeBlock(BlockManagerMaster.scala:115)
+	at org.apache.spark.scheduler.TaskResultGetter$$anon$3$$anonfun$run$1.apply$mcV$sp(TaskResultGetter.scala:95)
+	at org.apache.spark.scheduler.TaskResultGetter$$anon$3$$anonfun$run$1.apply(TaskResultGetter.scala:63)
+	at org.apache.spark.scheduler.TaskResultGetter$$anon$3$$anonfun$run$1.apply(TaskResultGetter.scala:63)
+	at org.apache.spark.util.Utils$.logUncaughtExceptions(Utils.scala:1954)
+	at org.apache.spark.scheduler.TaskResultGetter$$anon$3.run(TaskResultGetter.scala:62)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+17/08/29 15:37:12 INFO TaskSchedulerImpl: Removed TaskSet 4.0, whose tasks have all completed, from pool 
+17/08/29 15:37:12 INFO SparkContext: Successfully stopped SparkContext
+17/08/29 15:37:12 INFO ShutdownHookManager: Shutdown hook called
+17/08/29 15:37:12 INFO ShutdownHookManager: Deleting directory /tmp/spark-b1931e3a-dace-44b1-aae4-fa75e7895f09
